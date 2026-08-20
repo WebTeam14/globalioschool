@@ -36,7 +36,7 @@ function GalleryPage() {
     <main>
       <section className="surface-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-lines-dark opacity-50" aria-hidden />
-        <div className="container-gis relative py-20 md:py-28">
+        <div className="container-gis relative py-8 md:py-28">
           <Reveal>
             <p className="eyebrow text-cyan">Gallery</p>
             <h1 className="mt-4 font-display text-4xl font-semibold md:text-5xl">
@@ -70,7 +70,7 @@ function GalleryPage() {
             ))}
           </div>
 
-          <div className="mt-10 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
+          <div className="mt-6 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
             {items.map((g, i) => (
               <Reveal
                 key={g.src + g.title}

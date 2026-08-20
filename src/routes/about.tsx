@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Globe, Linkedin, Mail } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
+import { TypewriterHeading } from "@/components/site/TypewriterHeading";
 import aboutHeroAsset from "@/assets/about-hero-bg.jpg.asset.json";
 import aboutContentBg from "@/assets/about-content-bg.jpg";
 import {
@@ -45,7 +46,7 @@ function AboutPage() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border bg-background">
         <img
-          src={aboutHeroAsset.url}
+          src={aboutContentBg}
           alt=""
           aria-hidden
           width={1920}
@@ -53,10 +54,10 @@ function AboutPage() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/60"
+          className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent"
           aria-hidden
         />
-        <div className="container-gis relative py-16 md:py-24">
+        <div className="container-gis relative py-10 md:py-10">
           <Reveal>
             <p className="eyebrow text-brand-orange">About GIS</p>
             <h1 className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight text-foreground md:text-5xl">
@@ -82,18 +83,21 @@ function AboutPage() {
 
 
       {/* About content */}
-      <section className="relative overflow-hidden py-12 md:py-16">
-        <img
-          src={aboutContentBg}
-          alt=""
-          aria-hidden
-          width={1536}
-          height={1024}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/70 to-background/80" aria-hidden />
-        <div className="container-gis relative grid items-center gap-10 lg:grid-cols-2">
+      <section className="relative overflow-hidden py-10 md:py-10 bg-background">
+        <div className="container-gis relative grid items-center gap-6 lg:grid-cols-2">
+          <Reveal>
+            <TypewriterHeading text="Welcome to Global IoT School" />
+            <h3 className="mt-4 font-display text-xl font-medium text-brand-orange sm:text-2xl">
+              Shaping Your Digital Future with AI Innovation
+            </h3>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+              Global IoT School (GIS) is a leading EdTech institution offering hands-on, industry-aligned certification programs in Artificial Intelligence, Internet of Things (IoT), Cybersecurity, and SAP. Established in 2017, GIS bridges the gap between academics and industry through skill-based learning and global collaborations.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              With expert instructors from IITs, IISc, and industry leaders, we empower learners to gain practical expertise, real-world exposure, and globally recognized certifications that prepare them for leadership in the digital economy.
+            </p>
+          </Reveal>
+
           <Reveal className="relative">
             <div className="relative pb-14 pr-14 sm:pb-16 sm:pr-20">
               <div
@@ -114,30 +118,108 @@ function AboutPage() {
               />
             </div>
           </Reveal>
+        </div>
+      </section>
 
-          <Reveal delay={0.1}>
-            <p className="eyebrow text-brand-orange">Who we are</p>
-            <h2 className="mt-2 font-display text-2xl font-semibold sm:text-3xl">
-              Our Vision
-            </h2>
-            <p className="mt-3 leading-relaxed text-muted-foreground">{vision}</p>
-            <h2 className="mt-7 font-display text-2xl font-semibold sm:text-3xl">
-              Our Mission
-            </h2>
-            <ul className="mt-3 space-y-2.5 text-sm text-muted-foreground">
-              {mission.map((m) => (
-                <li key={m} className="flex gap-3">
-                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-accent" />
-                  {m}
-                </li>
-              ))}
-            </ul>
+      {/* Features */}
+      <section className="py-8 bg-background border-t border-border/50">
+        <div className="container-gis">
+          <Reveal className="text-center">
+            <h3 className="font-display text-2xl font-semibold text-navy sm:text-3xl">
+              Explore GIS Programs – Learn, Innovate, and Lead
+            </h3>
           </Reveal>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Industry-Relevant Curriculum",
+                desc: "Designed in collaboration with IITs, IISc, and industry experts for real-world impact."
+              },
+              {
+                title: "Expert Instructors",
+                desc: "Learn from faculty and professionals from IITs, NITs, and leading tech industries."
+              },
+              {
+                title: "Practical Learning & Projects",
+                desc: "Gain hands-on experience through live labs, simulations, and industry projects."
+              },
+              {
+                title: "Globally Recognized Certification",
+                desc: "Earn joint certification from Global IoT School and collaborating institutes."
+              }
+            ].map((f, i) => (
+              <Reveal key={f.title} delay={i * 0.1} className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
+                <h4 className="font-display text-lg font-semibold text-primary">{f.title}</h4>
+                <p className="mt-3 text-sm text-muted-foreground">{f.desc}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
+      <section className="py-10 bg-background">
+        <div className="container-gis">
+          <Reveal className="text-center">
+            <h2 className="font-display text-3xl font-bold text-navy sm:text-4xl">
+              Our Vision & Mission
+            </h2>
+          </Reveal>
+          <div className="mt-6 grid gap-8 md:grid-cols-2">
+            <Reveal delay={0.1} className="overflow-hidden rounded-xl border border-border/50 bg-card shadow-md">
+              <div className="relative h-[18rem] w-full bg-[#121b33]">
+                <img src={imgA.src} className="absolute inset-0 h-full w-full object-cover mix-blend-luminosity opacity-40" alt="Vision Background" />
+                <div className="absolute inset-0 bg-blue-900/20 mix-blend-overlay"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="font-display text-4xl font-extrabold text-white tracking-widest uppercase drop-shadow-xl">
+                    Our Vision
+                  </h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex size-10 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                  </div>
+                  <h4 className="font-display text-2xl font-bold text-navy">Our Vision</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed text-base">
+                  {vision}
+                </p>
+              </div>
+            </Reveal>
+            
+            <Reveal delay={0.2} className="overflow-hidden rounded-xl border border-border/50 bg-card shadow-md">
+              <div className="relative h-[18rem] w-full bg-[#0a192f]">
+                <img src={imgB.src} className="absolute inset-0 h-full w-full object-cover mix-blend-luminosity opacity-40" alt="Mission Background" />
+                <div className="absolute inset-0 bg-teal-900/20 mix-blend-overlay"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="font-display text-4xl font-extrabold text-white tracking-widest uppercase drop-shadow-xl">
+                    Our Mission
+                  </h3>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="flex size-10 items-center justify-center rounded-full bg-green-50 text-green-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                  </div>
+                  <h4 className="font-display text-2xl font-bold text-navy">Our Mission</h4>
+                </div>
+                <ul className="space-y-3 text-muted-foreground leading-relaxed text-base list-disc pl-5 marker:text-green-600">
+                  {mission.map((m) => (
+                    <li key={m}>{m}</li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
       {/* Objectives */}
-      <section className="bg-secondary/40 py-12 md:py-16">
+      <section className="bg-background py-8 md:py-10">
         <div className="container-gis">
           <Reveal>
             <p className="eyebrow text-brand-orange">What drives us</p>
@@ -163,7 +245,7 @@ function AboutPage() {
       </section>
 
       {/* Why choose */}
-      <section className="py-12 md:py-16">
+      <section className="bg-background py-8 md:py-10">
         <div className="container-gis">
           <Reveal>
             <h2 className="font-display text-2xl font-semibold sm:text-3xl">
@@ -186,7 +268,7 @@ function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="bg-secondary/40 py-12 md:py-16">
+      <section className="bg-background py-8 md:py-10">
         <div className="container-gis">
           <Reveal>
             <p className="eyebrow text-brand-orange">The people</p>
@@ -248,7 +330,7 @@ function AboutPage() {
       </section>
 
       {/* Global presence */}
-      <section className="py-12 md:py-16">
+      <section className="bg-background py-8 md:py-10">
         <div className="container-gis">
           <Reveal>
             <h2 className="font-display text-2xl font-semibold sm:text-3xl">

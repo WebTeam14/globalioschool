@@ -41,15 +41,16 @@ export function Navbar() {
   }, [open]);
 
   return (
-    <header
-      className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-300",
-        scrolled
-          ? "border-b border-border bg-background/85 shadow-[0_10px_40px_-32px_rgba(10,25,60,0.9)] backdrop-blur-xl"
-          : "border-b border-transparent bg-background",
-      )}
-    >
-      {/* Brand accent line */}
+    <>
+      <header
+        className={cn(
+          "sticky top-0 z-50 w-full transition-all duration-300",
+          scrolled
+            ? "border-b border-border bg-background/85 shadow-[0_10px_40px_-32px_rgba(10,25,60,0.9)] backdrop-blur-xl"
+            : "border-b border-transparent bg-background",
+        )}
+      >
+        {/* Brand accent line */}
       <div
         className="h-1 w-full bg-[linear-gradient(90deg,var(--navy),var(--brand-teal),var(--brand-orange),var(--cyan))]"
         aria-hidden
@@ -178,12 +179,13 @@ export function Navbar() {
         >
           <Menu className="size-5" aria-hidden />
         </button>
-      </div>
+        </div>
+      </header>
 
       {/* Mobile drawer */}
       <div
         className={cn(
-          "fixed inset-0 z-50 xl:hidden",
+          "fixed inset-0 z-[100] xl:hidden",
           open ? "pointer-events-auto" : "pointer-events-none",
         )}
         aria-hidden={!open}
@@ -294,6 +296,6 @@ export function Navbar() {
           </nav>
         </div>
       </div>
-    </header>
+    </>
   );
 }

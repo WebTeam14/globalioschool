@@ -9,7 +9,7 @@ const imgB = (gallery[5] ?? gallery[1])!;
 export function AboutIntro() {
   return (
     <section className="section-y">
-      <div className="container-gis grid items-center gap-12 lg:grid-cols-2">
+      <div className="container-gis grid items-center gap-8 lg:grid-cols-2">
         <Reveal className="relative">
           <div className="relative pb-16 pr-16 sm:pb-20 sm:pr-24">
             <div
@@ -37,7 +37,7 @@ export function AboutIntro() {
         <Reveal delay={0.12}>
           <p className="eyebrow text-brand-orange">About Us</p>
           <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl">
-            Learning that connects classrooms with industry
+            Shaping Your Digital Future with AI Innovation
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{vision}</p>
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">

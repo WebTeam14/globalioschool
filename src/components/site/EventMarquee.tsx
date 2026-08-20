@@ -12,7 +12,7 @@ export function EventMarquee() {
         </h2>
       </div>
 
-      <div className="relative mt-10">
+      <div className="relative mt-6">
         <div
           className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent sm:w-28"
           aria-hidden

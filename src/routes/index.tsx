@@ -5,6 +5,7 @@ import { TechOrbit } from "@/components/site/TechOrbit";
 import { DegreeSlider } from "@/components/site/DegreeSlider";
 import { EventMarquee } from "@/components/site/EventMarquee";
 import { AboutIntro } from "@/components/site/AboutIntro";
+import { WordSlider } from "@/components/site/WordSlider";
 import heroBg from "@/assets/hero-bg-new.jpg";
 import {
   site,
@@ -53,7 +54,7 @@ function Index() {
           height={1080}
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40"
+          className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent"
           aria-hidden
         />
         <div className="absolute inset-0 grid-lines opacity-40" aria-hidden />
@@ -65,16 +66,17 @@ function Index() {
           className="pointer-events-none absolute -left-32 bottom-0 size-[28rem] rounded-full bg-primary/15 blur-3xl"
           aria-hidden
         />
-        <div className="container-gis relative grid gap-12 py-24 md:py-32 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="container-gis relative grid gap-8 py-10 md:py-32 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal>
             <p className="eyebrow inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-primary">
               <span className="size-1.5 rounded-full bg-brand-orange" aria-hidden />
               {site.eyebrow}
             </p>
-            <h1 className="mt-6 font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-primary md:text-7xl">
+            <h1 className="mt-6 font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-primary md:text-7xl flex flex-col items-start gap-2">
               <span className="bg-gradient-to-r from-primary via-navy to-brand-orange bg-clip-text text-transparent">
-                {site.tagline}
+                Shaping Your Digital Future with
               </span>
+              <WordSlider words={["AI Innovation", "IoT Mastery", "Cyber Security", "SAP Expertise"]} />
             </h1>
             <p className="mt-6 max-w-xl text-lg font-medium leading-relaxed text-foreground/80 md:text-xl">
               {site.heroText}
@@ -94,7 +96,7 @@ function Index() {
                 Talk to Us
               </Link>
             </div>
-            <ul className="mt-10 flex flex-wrap gap-2 text-xs font-semibold text-foreground/70">
+            <ul className="mt-6 flex flex-wrap gap-2 text-xs font-semibold text-foreground/70">
               {credibility.map((c) => (
                 <li
                   key={c}
@@ -113,7 +115,7 @@ function Index() {
 
 
         {/* Degree programs auto slider */}
-        <div className="container-gis relative border-t border-foreground/10 py-16">
+        <div className="container-gis relative border-t border-foreground/10 py-10">
           <DegreeSlider />
         </div>
       </section>
@@ -126,7 +128,7 @@ function Index() {
 
       {/* Vision */}
       <section className="section-y">
-        <div className="container-gis grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="container-gis grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <p className="eyebrow text-primary">Our Vision</p>
             <h2 className="mt-3 font-display text-3xl font-semibold">
@@ -150,12 +152,12 @@ function Index() {
       <section className="section-y bg-secondary/40">
         <div className="container-gis">
           <Reveal>
-            <p className="eyebrow text-primary">Technology Domains</p>
+            <p className="eyebrow text-primary">Start Learning Today</p>
             <h2 className="mt-3 font-display text-3xl font-semibold">
-              Programs designed with industry
+              Featured Certification Courses
             </h2>
           </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {domains.map((d, i) => (
               <Reveal key={d.id} delay={i * 0.07}>
                 <Link
@@ -181,7 +183,7 @@ function Index() {
           <Reveal>
             <h2 className="font-display text-3xl font-semibold">Why learners choose GIS</h2>
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {pillars.map((p, i) => (
               <Reveal
                 key={p.title}
@@ -199,14 +201,14 @@ function Index() {
       {/* Testimonials */}
       <section className="surface-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-lines-dark opacity-40" aria-hidden />
-        <div className="container-gis relative py-20">
+        <div className="container-gis relative py-8">
           <Reveal>
             <p className="eyebrow text-cyan">Testimonials</p>
             <h2 className="mt-3 font-display text-3xl font-semibold">
               What partners and learners say
             </h2>
           </Reveal>
-          <div className="mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
+          <div className="mt-6 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
             {testimonials.map((t) => (
               <figure
                 key={t.name}
@@ -238,19 +240,20 @@ function Index() {
       <section className="section-y">
         <div className="container-gis">
           <Reveal>
-            <h2 className="font-display text-3xl font-semibold">Our Recruiters</h2>
+            <h2 className="font-display text-3xl font-semibold">Our Esteemed Recruiters</h2>
           </Reveal>
         </div>
-        <div className="mt-10 overflow-hidden">
-          <div className="marquee-track flex w-max items-center gap-12 px-6">
+        <div className="mt-6 overflow-hidden">
+          <div className="marquee-track flex w-max items-center gap-8 px-6">
             {[...recruiters, ...recruiters].map((r, i) => (
-              <img
-                key={r.name + i}
-                src={r.src}
-                alt={r.name}
-                loading="lazy"
-                className="h-12 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
-              />
+              <div key={r.name + i} className="flex h-20 w-40 shrink-0 items-center justify-center">
+                <img
+                  src={r.src}
+                  alt={r.name}
+                  loading="lazy"
+                  className="max-h-16 max-w-full object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -265,16 +268,17 @@ function Index() {
             </h2>
           </Reveal>
         </div>
-        <div className="mt-10 overflow-hidden">
-          <div className="marquee-track-rev flex w-max items-center gap-12 px-6">
+        <div className="mt-6 overflow-hidden">
+          <div className="marquee-track-rev flex w-max items-center gap-8 px-6">
             {[...partners, ...partners].map((p, i) => (
-              <img
-                key={p.name + i}
-                src={p.src}
-                alt={p.name}
-                loading="lazy"
-                className="h-14 w-auto object-contain opacity-80 transition hover:opacity-100"
-              />
+              <div key={p.name + i} className="flex h-20 w-40 shrink-0 items-center justify-center">
+                <img
+                  src={p.src}
+                  alt={p.name}
+                  loading="lazy"
+                  className="max-h-16 max-w-full object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>

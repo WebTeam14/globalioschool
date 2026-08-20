@@ -40,7 +40,7 @@ function ConsultancyPage() {
     <main>
       <section className="surface-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-lines-dark opacity-50" aria-hidden />
-        <div className="container-gis relative py-20 md:py-24">
+        <div className="container-gis relative py-8 md:py-10">
           <Reveal>
             <p className="eyebrow text-cyan">College Consultancy</p>
             <h1 className="mt-4 font-display text-3xl font-semibold md:text-5xl">
@@ -73,7 +73,7 @@ function ConsultancyPage() {
             </div>
           ))}
         </div>
-        <div className="container-gis mt-10">
+        <div className="container-gis mt-6">
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground"

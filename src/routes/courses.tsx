@@ -27,7 +27,7 @@ function CoursesPage() {
     <main>
       <section className="surface-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-lines-dark opacity-50" aria-hidden />
-        <div className="container-gis relative py-20 md:py-28">
+        <div className="container-gis relative py-8 md:py-28">
           <Reveal>
             <p className="eyebrow text-cyan">Technology Domains</p>
             <h1 className="mt-4 max-w-3xl font-display text-4xl font-semibold leading-tight md:text-5xl">
@@ -64,7 +64,7 @@ function CoursesPage() {
               <h2 className="mt-3 font-display text-3xl font-semibold">{d.title}</h2>
               <p className="mt-3 max-w-2xl text-muted-foreground">{d.description}</p>
             </Reveal>
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
               {courses
                 .filter((c) => c.domain === d.id)
                 .map((c, i) => (
@@ -83,7 +83,7 @@ function CoursesPage() {
       ))}
 
       <section className="surface-dark">
-        <div className="container-gis py-16 text-center">
+        <div className="container-gis py-10 text-center">
           <h2 className="font-display text-3xl font-semibold">Ready to enroll?</h2>
           <p className="mx-auto mt-3 max-w-xl text-navy-foreground/75">
             Register for an upcoming batch or talk to our team about the right program

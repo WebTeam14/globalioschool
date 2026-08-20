@@ -30,7 +30,7 @@ function PlacementPage() {
     <main>
       <section className="surface-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-lines-dark opacity-50" aria-hidden />
-        <div className="container-gis relative py-20 md:py-24">
+        <div className="container-gis relative py-8 md:py-10">
           <Reveal>
             <p className="eyebrow text-cyan">Placement</p>
             <h1 className="mt-4 font-display text-3xl font-semibold md:text-5xl">
@@ -66,7 +66,7 @@ function PlacementPage() {
               Companies that hire from Global IoT School
             </h2>
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {recruiters.map((r, i) => (
               <Reveal
                 key={r.name}

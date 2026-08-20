@@ -6,8 +6,8 @@ export function Footer() {
   return (
     <footer className="surface-dark relative overflow-hidden">
       <div className="absolute inset-0 grid-lines-dark opacity-50" aria-hidden />
-      <div className="container-gis relative py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
+      <div className="container-gis relative py-10">
+        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
           <div>
             <div className="flex items-center gap-3">
               <img

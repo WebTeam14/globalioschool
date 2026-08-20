@@ -1,13 +1,13 @@
 // Content sourced from globaliotschool.com — preserved verbatim where possible.
 
-import gisLogo from "@/assets/gis-logo.jpg.asset.json";
+import gisLogo from "@/assets/logo.jpeg";
 
 const BASE = "https://globaliotschool.com";
 
 export const site = {
   name: "Global IoT School",
   short: "GIS",
-  logo: gisLogo.url,
+  logo: gisLogo,
   tagline: "Shaping Your Digital Future with AI Innovation",
   eyebrow: "WELCOME TO GLOBAL IOT SCHOOL",
   heroText:
