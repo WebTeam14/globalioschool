@@ -27,9 +27,8 @@ function ContactPage() {
     <main>
       <section className="surface-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-lines-dark opacity-50" aria-hidden />
-        <div className="container-gis relative py-8 md:py-28">
-          <Reveal>
-            <p className="eyebrow text-cyan">Contact</p>
+        <div className="container-gis relative py-2 md:py-15">
+          {/* <Reveal>
             <h1 className="mt-4 font-display text-4xl font-semibold md:text-5xl">
               Let&apos;s talk about your future skills
             </h1>
@@ -37,7 +36,9 @@ function ContactPage() {
               Our team is available for program enquiries, institutional collaborations
               and corporate training.
             </p>
-          </Reveal>
+          </Reveal> */}
+          <p className="eyebrow text-cyan">Contact</p>
+
         </div>
       </section>
 

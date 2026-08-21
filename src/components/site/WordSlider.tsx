@@ -27,7 +27,7 @@ export function WordSlider({ words }: { words: string[] }) {
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-100%", opacity: 0 }}
           transition={{ duration: 0.5, ease: "circOut" }}
-          className="absolute left-0 top-0 inline-block w-full bg-gradient-to-r from-brand-orange to-primary bg-clip-text text-transparent whitespace-nowrap"
+          className="absolute left-0 top-0 inline-block w-full text-brand-orange font-bold whitespace-nowrap"
         >
           {words[index]}
         </motion.span>

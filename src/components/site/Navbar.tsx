@@ -76,7 +76,7 @@ export function Navbar() {
             )}
           />
           <span className="hidden min-w-0 flex-col leading-tight sm:flex">
-            <span className="truncate font-display text-base font-bold tracking-tight text-foreground">
+            <span className="truncate font-display text-base font-bold tracking-tight text-primary">
               Global IoT School
             </span>
             <span className="hidden truncate text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-brand-orange md:block">

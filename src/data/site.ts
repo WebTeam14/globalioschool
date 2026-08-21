@@ -473,3 +473,86 @@ export const credibility = [
   "Global certifications",
   "Industry collaborations",
 ];
+
+export interface JobOpening {
+  id: string;
+  title: string;
+  department: string;
+  type: string;
+  location: string;
+  experience: string;
+  openingsCount: number;
+  postedDate: string;
+  tag?: string;
+  description: string;
+  skills: string[];
+}
+
+export const jobOpenings: JobOpening[] = [
+  {
+    id: "job-ai-faculty",
+    title: "AI & Deep Learning Lead Trainer",
+    department: "Artificial Intelligence",
+    type: "Full-Time",
+    location: "Mumbai (Andheri)",
+    experience: "3-6 Years",
+    openingsCount: 2,
+    postedDate: "Today",
+    tag: "Urgent Hiring",
+    description: "Deliver hands-on sessions in Generative AI, PyTorch, computer vision, and neural network project mentoring.",
+    skills: ["Python", "PyTorch", "GenAI", "LLMs"],
+  },
+  {
+    id: "job-iot-engineer",
+    title: "IoT & Embedded Systems Lead",
+    department: "Internet of Things",
+    type: "Full-Time / Hybrid",
+    location: "Navi Mumbai",
+    experience: "2-5 Years",
+    openingsCount: 3,
+    postedDate: "1d ago",
+    tag: "Admin Featured",
+    description: "Design lab simulations, hardware testbeds (ESP32/STM32), and edge-to-cloud industrial protocols.",
+    skills: ["ESP32", "MQTT", "MicroPython", "Edge AI"],
+  },
+  {
+    id: "job-cyber-instructor",
+    title: "Cybersecurity Analyst & Lab Faculty",
+    department: "Cybersecurity",
+    type: "Full-Time",
+    location: "Mumbai",
+    experience: "3-5 Years",
+    openingsCount: 1,
+    postedDate: "2d ago",
+    tag: "New Opening",
+    description: "Lead live ethical hacking labs, network penetration exercises, and industry SOC compliance workshops.",
+    skills: ["SOC", "Penetration Testing", "Wireshark", "GRC"],
+  },
+  {
+    id: "job-sap-senior",
+    title: "SAP S/4HANA & FICO Senior Mentor",
+    department: "SAP Enterprise",
+    type: "Visiting / Hybrid",
+    location: "Remote / Mumbai",
+    experience: "5+ Years",
+    openingsCount: 2,
+    postedDate: "3d ago",
+    tag: "Admin Pick",
+    description: "Mentor learners on SAP FICO / MM implementation, business process workflows, and ERP configurations.",
+    skills: ["SAP FICO", "S/4HANA", "ERP Implementation"],
+  },
+  {
+    id: "job-academic-coordinator",
+    title: "EdTech Academic & Placement Coordinator",
+    department: "Operations",
+    type: "Full-Time",
+    location: "Mumbai (Andheri)",
+    experience: "1-3 Years",
+    openingsCount: 2,
+    postedDate: "4d ago",
+    tag: "Active",
+    description: "Coordinate student certifications, associate company hiring drives, and daily academic schedules.",
+    skills: ["Student Support", "Hiring Drives", "CRM", "Coordination"],
+  },
+];
+

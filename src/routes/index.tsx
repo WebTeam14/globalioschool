@@ -66,14 +66,14 @@ function Index() {
           className="pointer-events-none absolute -left-32 bottom-0 size-[28rem] rounded-full bg-primary/15 blur-3xl"
           aria-hidden
         />
-        <div className="container-gis relative grid gap-8 py-10 md:py-32 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="container-gis relative grid gap-8 py-10 md:py-6 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal>
             <p className="eyebrow inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-primary">
               <span className="size-1.5 rounded-full bg-brand-orange" aria-hidden />
               {site.eyebrow}
             </p>
-            <h1 className="mt-6 font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-primary md:text-7xl flex flex-col items-start gap-2">
-              <span className="bg-gradient-to-r from-primary via-navy to-brand-orange bg-clip-text text-transparent">
+            <h1 className="mt-6 font-display text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.08] tracking-tight text-primary flex flex-col items-start gap-2">
+              <span className="text-primary font-bold">
                 Shaping Your Digital Future with
               </span>
               <WordSlider words={["AI Innovation", "IoT Mastery", "Cyber Security", "SAP Expertise"]} />

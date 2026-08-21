@@ -36,23 +36,24 @@ function GalleryPage() {
     <main>
       <section className="surface-dark relative overflow-hidden">
         <div className="absolute inset-0 grid-lines-dark opacity-50" aria-hidden />
-        <div className="container-gis relative py-8 md:py-28">
-          <Reveal>
-            <p className="eyebrow text-cyan">Gallery</p>
+        <div className="container-gis relative py-5 md:py-15">
+          {/* <Reveal>
             <h1 className="mt-4 font-display text-4xl font-semibold md:text-5xl">
-              Moments from our campus engagements
+              Let&apos;s talk about your future skills
             </h1>
             <p className="mt-6 max-w-2xl text-navy-foreground/75">
-              Workshops, seminars, orientation sessions and institutional meetings across
-              India and abroad.
+              Our team is available for program enquiries, institutional collaborations
+              and corporate training.
             </p>
-          </Reveal>
+          </Reveal> */}
+          <p className="eyebrow text-cyan text-center">Gallery</p>
+
         </div>
       </section>
 
       <section className="section-y">
         <div className="container-gis">
-          <div className="flex flex-wrap gap-2">
+          {/* <div className="flex flex-wrap gap-2">
             {categories.map((c) => (
               <button
                 key={c}
@@ -68,9 +69,9 @@ function GalleryPage() {
                 {c}
               </button>
             ))}
-          </div>
+          </div> */}
 
-          <div className="mt-6 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
+          <div className="mt-2 columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
             {items.map((g, i) => (
               <Reveal
                 key={g.src + g.title}
@@ -94,6 +95,6 @@ function GalleryPage() {
           </div>
         </div>
       </section>
-    </main>
+    </main >
   );
 }

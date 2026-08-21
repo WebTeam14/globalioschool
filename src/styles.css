@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -51,7 +52,8 @@
   --color-cyan: var(--cyan);
   --color-indigo: var(--indigo);
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "DM Serif Display", "Space Grotesk", serif;
+  --font-serif: "DM Serif Display", serif;
   --color-brand-orange: var(--brand-orange);
   --color-brand-teal: var(--brand-teal);
   --color-ring-offset-background: var(--background);
@@ -170,13 +172,29 @@
   }
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
+    font-weight: 700;
     text-wrap: balance;
+  }
+  p {
+    font-weight: 450;
   }
   :focus-visible {
     outline: 2px solid var(--cyan);
     outline-offset: 2px;
   }
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 @utility container-gis {
