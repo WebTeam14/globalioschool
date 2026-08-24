@@ -1,9 +1,13 @@
 // Content sourced from globaliotschool.com — preserved verbatim where possible.
 
 import gisLogo from "@/assets/logo.jpeg";
-import { getGisAsset } from "./gisImages";
-
-export const getGisImage = getGisAsset;
+import {
+  recruiterImages,
+  partnerImages,
+  testimonialImages,
+  teamImages,
+  galleryImages,
+} from "./gisImages";
 
 const BASE = "https://globaliotschool.com";
 
@@ -298,35 +302,35 @@ export const testimonials = [
       "An excellent platform that bridges the gap between academic learning and real-world technology. A true enabler of future-ready professionals.",
     name: "Dr. Jayanta K. Behera",
     role: "Principal, St. Wilfred’s College",
-    image: getGisImage("image (18).png"),
+    image: testimonialImages.behara,
   },
   {
     quote:
       "This training centre is an excellent choice for individuals looking to build their careers in SAP. The team offers constant support and career guidance, making it an amazing experience.",
     name: "Amit Shah",
     role: "Capgemini",
-    image: getGisImage("t1.jpg"),
+    image: testimonialImages.amitShah,
   },
   {
     quote:
       "Global IoT School provided exceptional SAP training with experienced instructors and fast placement support. A great partner in our students’ professional journey.",
     name: "Prajkata",
     role: "Reliance",
-    image: getGisImage("t2.jpg"),
+    image: testimonialImages.prajkta,
   },
   {
     quote:
       "Exceptional SAP training and swift placement support — Global IoT School truly empowers our students’ careers.",
     name: "Sandip Mishra",
     role: "HCLTech",
-    image: getGisImage("WhatsApp Image 2025-11-06 at 10.46.24 AM.jpeg"),
+    image: testimonialImages.sandip,
   },
   {
     quote:
       "Global IoT School is doing remarkable work in equipping students with cutting-edge, industry-relevant skills. Their practical approach is commendable.",
     name: "Dr. K. L. Verma",
     role: "Vice Chancellor, CSMU University",
-    image: getGisImage("WhatsApp Image 2025-06-24 at 3.51.06 PM.jpg"),
+    image: testimonialImages.verma,
   },
 ];
 
@@ -351,7 +355,7 @@ export const recruiters = [
   ["Liberty Videocon Insurance", "Liberty_General_Insurance.jpg"],
   ["The American University in Cairo", "unnamed.webp"],
   ["Jamna Auto Industries Ltd", "jamna.png"],
-].map(([name, file]) => ({ name: name as string, src: getGisImage(file as string) }));
+].map(([name, file]) => ({ name: name as string, src: recruiterImages[file] || "" }));
 
 export const partners = [
   ["Karnatak Lingayat Education Society", "kle.png"],
@@ -366,94 +370,90 @@ export const partners = [
   ["Bhartee Vidyapheet", "bv.jpeg"],
   ["MGM College", "MGM_Institute_of_Health_Sciences_Logo.png"],
   ["NCRD Sterling College", "ncrd.jpeg"],
-].map(([name, file]) => ({ name: name as string, src: getGisImage(file as string) }));
+].map(([name, file]) => ({ name: name as string, src: partnerImages[file] || "" }));
 
 export const team = [
   {
     name: "Mr. Neeraj Kumar",
     role: "Founder & CEO",
     tag: "Founder & CEO",
-    image: getGisImage("team/Mr.NeerajKumar.jpeg"),
+    image: teamImages.neeraj,
   },
   {
     name: "Dr. Devanand Shinde",
     role: "Chief Strategic Advisor",
     tag: "Chief Advisor",
-    image: getGisImage("team/Devanand shinde.jpeg"),
+    image: teamImages.devanand,
   },
   {
     name: "Dr. Anandi G",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: getGisImage("team/anandi.png"),
+    image: teamImages.anandi,
   },
   {
     name: "Mr. Saud Al Jarah",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: getGisImage("director.jpeg"),
+    image: teamImages.saud,
   },
   {
     name: "Dr. Saziya Khan",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: getGisImage("team/saziya.png"),
+    image: teamImages.saziya,
   },
   {
     name: "Dr. Jayanta K Behera",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: getGisImage("team/Dr.Jayant.jpg"),
+    image: teamImages.jayant,
   },
   {
     name: "Mr. Mookwang Kim",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: getGisImage("mookwang.jpeg"),
+    image: teamImages.devanand,
   },
 ];
 
 export const gallery = [
-  ["AI Workshop - Police Department", "police.jpeg", "Workshops"],
-  ["Qatar Chamber of Commerce Meeting", "visits/qtar meeting.jpg", "Meetings"],
-  ["DY Patil Management College", "visits/dy patil.jpeg", "Institutions"],
-  [
-    "Vice-Chancellor CSMU & Ex Vice-Chancellor CSMU",
-    "visits/csmu meeting.jpeg",
-    "Meetings",
-  ],
-  ["CKT College", "visits/ckt visit.jpeg", "Institutions"],
-  ["Orientation Session - Modern College", "visits/morden.jpeg", "Orientation"],
-  [
-    "Orientation Session - St Wilfred College",
-    "visits/wilfred.jpg",
-    "Orientation",
-  ],
-  [
-    "Cybersecurity Seminar - Vidyalankar Institute",
-    "visits/vidyalankar.jpeg",
-    "Seminars",
-  ],
-  [
-    "Cybersecurity Seminar - Bharti Vidyapeeth College",
-    "visits/bhartee.jpeg",
-    "Seminars",
-  ],
-  [
-    "Productive meeting with ESDS Software Solution Pvt. Ltd.",
-    "visits/3.jpeg",
-    "Meetings",
-  ],
-  ["Meeting with Dr. Homi Bhabha University", "visits/7.jpeg", "Meetings"],
-  ["Orientation Session at St. Wilfred’s College", "visits/8.jpeg", "Orientation"],
-  ["K J Somaiya College Visit", "k j somya visit.jpeg", "Institutions"],
-  ["South Korea Visit", "south korea visit.jpeg", "Meetings"],
-  ["Institutional Engagement", "visits/1.jpeg", "Institutions"],
-].map(([title, file, category]) => ({
-  title: title as string,
-  category: category as string,
-  src: getGisImage(file as string),
-}));
+  { title: "AI Workshop - Police Department", category: "Workshops", src: galleryImages.police },
+  { title: "Qatar Chamber of Commerce Meeting", category: "Meetings", src: galleryImages.qtar },
+  { title: "DY Patil Management College", category: "Institutions", src: galleryImages.dyPatil },
+  {
+    title: "Vice-Chancellor CSMU & Ex Vice-Chancellor CSMU",
+    category: "Meetings",
+    src: galleryImages.csmu,
+  },
+  { title: "CKT College", category: "Institutions", src: galleryImages.ckt },
+  { title: "Orientation Session - Modern College", category: "Orientation", src: galleryImages.morden },
+  {
+    title: "Orientation Session - St Wilfred College",
+    category: "Orientation",
+    src: galleryImages.wilfred,
+  },
+  {
+    title: "Cybersecurity Seminar - Vidyalankar Institute",
+    category: "Seminars",
+    src: galleryImages.vidyalankar,
+  },
+  {
+    title: "Cybersecurity Seminar - Bharti Vidyapeeth College",
+    category: "Seminars",
+    src: galleryImages.bhartee,
+  },
+  {
+    title: "Productive meeting with ESDS Software Solution Pvt. Ltd.",
+    category: "Meetings",
+    src: galleryImages.esds,
+  },
+  { title: "Meeting with Dr. Homi Bhabha University", category: "Meetings", src: galleryImages.homiBhabha },
+  { title: "Orientation Session at St. Wilfred’s College", category: "Orientation", src: galleryImages.wilfredOrientation },
+  { title: "K J Somaiya College Visit", category: "Institutions", src: galleryImages.somya },
+  { title: "South Korea Visit", category: "Meetings", src: galleryImages.southKorea },
+  { title: "Institutional Engagement", category: "Institutions", src: galleryImages.institutional },
+];
 
 export const globalLocations = [
   "India",
