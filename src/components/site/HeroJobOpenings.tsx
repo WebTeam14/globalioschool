@@ -74,11 +74,10 @@ export function HeroJobOpenings() {
               key={dept}
               type="button"
               onClick={() => setSelectedDept(dept)}
-              className={`rounded-md px-2 py-0.5 text-[11px] font-medium transition-all ${
-                selectedDept === dept
+              className={`rounded-md px-2 py-0.5 text-[11px] font-medium transition-all ${selectedDept === dept
                   ? "bg-primary text-primary-foreground shadow-sm"
                   : "bg-secondary/70 text-muted-foreground hover:bg-secondary hover:text-foreground"
-              }`}
+                }`}
             >
               {dept}
             </button>
@@ -185,7 +184,7 @@ export function HeroJobOpenings() {
 
         {/* Footer link to admin career desk */}
         <div className="mt-3 flex items-center justify-between border-t border-border/70 pt-2.5 text-[11px] text-muted-foreground">
-          <span>Direct: <a href="mailto:admin@globaliotschool.com" className="font-semibold text-primary hover:underline">admin@globaliotschool.com</a></span>
+          <span>Direct: <a href="mailto:webadmin@technoriya.com" className="font-semibold text-primary hover:underline">webadmin@technoriya.com</a></span>
           <button
             type="button"
             onClick={() => handleOpenApply(jobOpenings[0]!)}

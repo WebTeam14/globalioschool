@@ -9,7 +9,7 @@ import aboutContentBg from "@/assets/about-content-bg.jpg";
 import visionAiImg from "@/assets/vision-ai.jpg";
 import missionAiImg from "@/assets/mission-ai.jpg";
 import aboutVideo from "@/assets/images/about.mp4";
-import aboutImg from "@/assets/images/about.png";
+import aboutImg from "@/assets/Dr.Nishakant Visit HBSU.png";
 import {
   vision,
   mission,
@@ -105,7 +105,7 @@ function AboutPage() {
             <h3 className="mt-2 font-display text-xl font-semibold text-brand-orange sm:text-2xl">
               Shaping Your Digital Future with AI Innovation
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground text-black">
               Global IoT School (GIS) offers hands-on, industry-aligned certification programs in Artificial Intelligence, Internet of Things (IoT), Cybersecurity, and SAP. Established in 2017, GIS bridges the gap between academics and industry through practical skill-based learning and international collaborations.
             </p>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
@@ -347,12 +347,12 @@ function AboutPage() {
                 delay={i * 0.03}
                 className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:shadow-lg"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden bg-secondary/40">
                   <img
                     src={m.image}
                     alt={`${m.name} — ${m.role}`}
                     loading="lazy"
-                    className="h-52 w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    className="h-60 w-full object-contain object-center transition-transform duration-500 group-hover:scale-105"
                   />
                   {m.tag ? (
                     <span className="absolute left-2.5 top-2.5 rounded-full bg-background/90 px-2 py-0.5 text-[10px] font-medium text-foreground shadow-sm">

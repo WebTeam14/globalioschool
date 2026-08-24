@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Linkedin, Instagram, Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Linkedin, Instagram, Mail, Phone, MapPin, Globe, CreditCard } from "lucide-react";
 import { site, navItems, domains } from "@/data/site";
 
 export function Footer() {
@@ -43,6 +43,15 @@ export function Footer() {
                 <Instagram className="size-4" aria-hidden />
               </a>
             </div>
+            <a
+              href="https://rzp.io/l/7j2TrkC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-brand-teal to-primary px-4 py-2.5 text-xs font-bold text-white shadow-md transition-all hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5"
+            >
+              <CreditCard className="size-3.5" aria-hidden />
+              Pay via Razorpay
+            </a>
           </div>
 
           <nav aria-label="Footer navigation">

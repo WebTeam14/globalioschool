@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { X, CheckCircle2, Briefcase, Sparkles, Send, Loader2, Phone, Mail, MapPin, GraduationCap } from "lucide-react";
 import { type JobOpening, jobOpenings } from "@/data/site";
+import { sendEnquiryEmail } from "@/lib/emailService";
 
 interface JobApplicationModalProps {
   job: JobOpening | null;
@@ -26,17 +27,38 @@ export function JobApplicationModal({ job, isOpen, onClose }: JobApplicationModa
 
   const currentJob = jobOpenings.find((j) => j.id === (job ? job.id : selectedJobId)) || job || jobOpenings[0]!;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate standard real-time application processing
-    setTimeout(() => {
-      const generatedId = "GIS-APP-" + Math.floor(100000 + Math.random() * 900000);
-      setApplicationId(generatedId);
+    const generatedId = "GIS-APP-" + Math.floor(100000 + Math.random() * 900000);
+    setApplicationId(generatedId);
+
+    try {
+      await sendEnquiryEmail({
+        enquiryType: "Job Application",
+        subject: `[Job Application] ${currentJob.title} (${currentJob.department}) - ${fullName} [Ref: ${generatedId}]`,
+        senderName: fullName,
+        senderEmail: email,
+        senderPhone: phone,
+        referenceId: generatedId,
+        fields: {
+          "Applied Position": currentJob.title,
+          "Department": currentJob.department,
+          "Job Location": currentJob.location,
+          "Candidate Location / City": city,
+          "Total Experience": experience,
+          "Highest Qualification": qualification,
+          "Resume / Portfolio Link": portfolio || "Not provided",
+          "Applicant Note": coverNote || "None provided",
+        },
+      });
+    } catch (err) {
+      console.error("Job application email dispatch failed:", err);
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1000);
+    }
   };
 
   const handleReset = () => {

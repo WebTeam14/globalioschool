@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { X, CheckCircle2, Building2, Send, Loader2, Phone, Mail, Sparkles, Check, FileText } from "lucide-react";
 import { site } from "@/data/site";
+import { sendEnquiryEmail } from "@/lib/emailService";
 
 export interface ConsultancyService {
   id: string;
   title: string;
   subtitle: string;
-  description?: string;
+  description?: string | undefined;
 }
 
 interface ConsultancyEnquiryModalProps {
@@ -30,17 +31,38 @@ export function ConsultancyEnquiryModal({ service, isOpen, onClose }: Consultanc
 
   if (!isOpen || !service) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate real-time institutional advisory ticket generation
-    setTimeout(() => {
-      const id = "GIS-CNS-" + Math.floor(100000 + Math.random() * 900000);
-      setConsultancyId(id);
+    const generatedId = "GIS-CNS-" + Math.floor(100000 + Math.random() * 900000);
+    setConsultancyId(generatedId);
+
+    try {
+      await sendEnquiryEmail({
+        enquiryType: "Consultancy Enquiry",
+        subject: `[Consultancy Enquiry] ${service.title} - ${institutionName} (${contactPerson}) [Ref: ${generatedId}]`,
+        senderName: `${contactPerson} (${institutionName})`,
+        senderEmail: email,
+        senderPhone: phone,
+        referenceId: generatedId,
+        fields: {
+          "Advisory Service": service.title,
+          "Service Subtitle": service.subtitle,
+          "College / University Name": institutionName,
+          "Representative Name": contactPerson,
+          "Designation / Role": designation,
+          "Institution Location / State": location,
+          "Expected Timeline": timeline,
+          "Scope & Objectives": requirements || "None provided",
+        },
+      });
+    } catch (err) {
+      console.error("Consultancy enquiry email dispatch failed:", err);
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 900);
+    }
   };
 
   const handleReset = () => {

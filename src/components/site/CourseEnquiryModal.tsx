@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { X, CheckCircle2, BookOpen, Send, Loader2, MessageSquare, Phone, Mail, User, Sparkles, Clock, Check } from "lucide-react";
 import { site } from "@/data/site";
+import { sendEnquiryEmail } from "@/lib/emailService";
 
 export interface CourseData {
   id: string;
@@ -29,17 +30,36 @@ export function CourseEnquiryModal({ course, isOpen, onClose }: CourseEnquiryMod
 
   if (!isOpen || !course) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate real-time enquiry processing & CRM logging
-    setTimeout(() => {
-      const id = "GIS-CRS-" + Math.floor(100000 + Math.random() * 900000);
-      setEnquiryId(id);
+    const generatedId = "GIS-CRS-" + Math.floor(100000 + Math.random() * 900000);
+    setEnquiryId(generatedId);
+
+    try {
+      await sendEnquiryEmail({
+        enquiryType: "Course Enquiry",
+        subject: `[Course Enquiry] ${course.title} - ${fullName} (Ref: ${generatedId})`,
+        senderName: fullName,
+        senderEmail: email,
+        senderPhone: phone,
+        referenceId: generatedId,
+        fields: {
+          "Interested Program": course.title,
+          "Program Category": course.category,
+          "Domain": domainLabels[course.domain] || course.domain,
+          "Current Background": learnerType,
+          "Preferred Batch Mode": learningMode,
+          "Questions / Notes": message || "None provided",
+        },
+      });
+    } catch (err) {
+      console.error("Course enquiry email dispatch failed:", err);
+    } finally {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 900);
+    }
   };
 
   const handleReset = () => {
