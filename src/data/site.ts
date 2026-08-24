@@ -2,6 +2,24 @@
 
 import gisLogo from "@/assets/logo.jpeg";
 
+const gisImages = import.meta.glob<string>("/src/assets/images/GIS/**/*", {
+  eager: true,
+  import: "default",
+});
+
+export function getGisImage(pathOrFilename: string): string {
+  const decoded = decodeURIComponent(pathOrFilename)
+    .replace(/^(\/)?(images\/GIS\/)?/, "")
+    .replace(/^(\/)?(src\/assets\/images\/GIS\/)?/, "");
+
+  for (const [key, value] of Object.entries(gisImages)) {
+    if (key.endsWith(`/${decoded}`) || decodeURIComponent(key).endsWith(`/${decoded}`) || key.endsWith(decoded)) {
+      return value;
+    }
+  }
+  return `/images/GIS/${decoded}`;
+}
+
 const BASE = "https://globaliotschool.com";
 
 export const site = {
@@ -295,35 +313,35 @@ export const testimonials = [
       "An excellent platform that bridges the gap between academic learning and real-world technology. A true enabler of future-ready professionals.",
     name: "Dr. Jayanta K. Behera",
     role: "Principal, St. Wilfred’s College",
-    image: "/images/GIS/image%20(18).png",
+    image: getGisImage("image (18).png"),
   },
   {
     quote:
       "This training centre is an excellent choice for individuals looking to build their careers in SAP. The team offers constant support and career guidance, making it an amazing experience.",
     name: "Amit Shah",
     role: "Capgemini",
-    image: "/images/GIS/t1.jpg",
+    image: getGisImage("t1.jpg"),
   },
   {
     quote:
       "Global IoT School provided exceptional SAP training with experienced instructors and fast placement support. A great partner in our students’ professional journey.",
     name: "Prajkata",
     role: "Reliance",
-    image: "/images/GIS/t2.jpg",
+    image: getGisImage("t2.jpg"),
   },
   {
     quote:
       "Exceptional SAP training and swift placement support — Global IoT School truly empowers our students’ careers.",
     name: "Sandip Mishra",
     role: "HCLTech",
-    image: "/images/GIS/WhatsApp%20Image%202025-11-06%20at%2010.46.24%20AM.jpeg",
+    image: getGisImage("WhatsApp Image 2025-11-06 at 10.46.24 AM.jpeg"),
   },
   {
     quote:
       "Global IoT School is doing remarkable work in equipping students with cutting-edge, industry-relevant skills. Their practical approach is commendable.",
     name: "Dr. K. L. Verma",
     role: "Vice Chancellor, CSMU University",
-    image: "/images/GIS/WhatsApp%20Image%202025-06-24%20at%203.51.06%20PM.jpg",
+    image: getGisImage("WhatsApp Image 2025-06-24 at 3.51.06 PM.jpg"),
   },
 ];
 
@@ -333,7 +351,7 @@ export const recruiters = [
   ["ABB", "abb.png"],
   ["Wipro", "Wipro_Primary_Logo_Color_RGB.svg.png"],
   ["Cox & Kings", "Cox_and_Kings_logo.svg.png"],
-  ["AT&S", "AT%26S_Logo.svg.png"],
+  ["AT&S", "AT&S_Logo.svg.png"],
   ["Kurl-on", "kurlon-vector-logo.png"],
   ["Usha", "USHA_Logo.pdf.jpg"],
   ["Bayer", "Logo_Bayer.svg.png"],
@@ -348,7 +366,7 @@ export const recruiters = [
   ["Liberty Videocon Insurance", "Liberty_General_Insurance.jpg"],
   ["The American University in Cairo", "unnamed.webp"],
   ["Jamna Auto Industries Ltd", "jamna.png"],
-].map(([name, file]) => ({ name: name as string, src: `/images/GIS/${file}` }));
+].map(([name, file]) => ({ name: name as string, src: getGisImage(file as string) }));
 
 export const partners = [
   ["Karnatak Lingayat Education Society", "kle.png"],
@@ -363,63 +381,63 @@ export const partners = [
   ["Bhartee Vidyapheet", "bv.jpeg"],
   ["MGM College", "MGM_Institute_of_Health_Sciences_Logo.png"],
   ["NCRD Sterling College", "ncrd.jpeg"],
-].map(([name, file]) => ({ name: name as string, src: `/images/GIS/${file}` }));
+].map(([name, file]) => ({ name: name as string, src: getGisImage(file as string) }));
 
 export const team = [
   {
     name: "Mr. Neeraj Kumar",
     role: "Founder & CEO",
     tag: "Founder & CEO",
-    image: "/images/GIS/team/Mr.NeerajKumar.jpeg",
+    image: getGisImage("team/Mr.NeerajKumar.jpeg"),
   },
   {
     name: "Dr. Devanand Shinde",
     role: "Chief Strategic Advisor",
     tag: "Chief Advisor",
-    image: "/images/GIS/team/Devanand%20shinde.jpeg",
+    image: getGisImage("team/Devanand shinde.jpeg"),
   },
   {
     name: "Dr. Anandi G",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: "/images/GIS/team/anandi.png",
+    image: getGisImage("team/anandi.png"),
   },
   {
     name: "Mr. Saud Al Jarah",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: "/images/GIS/director.jpeg",
+    image: getGisImage("director.jpeg"),
   },
   {
     name: "Dr. Saziya Khan",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: "/images/GIS/team/saziya.png",
+    image: getGisImage("team/saziya.png"),
   },
   {
     name: "Dr. Jayanta K Behera",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: "/images/GIS/team/Dr.Jayant.jpg",
+    image: getGisImage("team/Dr.Jayant.jpg"),
   },
   {
     name: "Mr. Mookwang Kim",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: "/images/GIS/mookwang.jpeg",
+    image: getGisImage("mookwang.jpeg"),
   },
 ];
 
 export const gallery = [
   ["AI Workshop - Police Department", "police.jpeg", "Workshops"],
-  ["Qatar Chamber of Commerce Meeting", "visits/qtar%20meeting.jpg", "Meetings"],
-  ["DY Patil Management College", "visits/dy%20patil.jpeg", "Institutions"],
+  ["Qatar Chamber of Commerce Meeting", "visits/qtar meeting.jpg", "Meetings"],
+  ["DY Patil Management College", "visits/dy patil.jpeg", "Institutions"],
   [
     "Vice-Chancellor CSMU & Ex Vice-Chancellor CSMU",
-    "visits/csmu%20meeting.jpeg",
+    "visits/csmu meeting.jpeg",
     "Meetings",
   ],
-  ["CKT College", "visits/ckt%20visit.jpeg", "Institutions"],
+  ["CKT College", "visits/ckt visit.jpeg", "Institutions"],
   ["Orientation Session - Modern College", "visits/morden.jpeg", "Orientation"],
   [
     "Orientation Session - St Wilfred College",
@@ -443,13 +461,13 @@ export const gallery = [
   ],
   ["Meeting with Dr. Homi Bhabha University", "visits/7.jpeg", "Meetings"],
   ["Orientation Session at St. Wilfred’s College", "visits/8.jpeg", "Orientation"],
-  ["K J Somaiya College Visit", "k%20j%20somya%20visit.jpeg", "Institutions"],
-  ["South Korea Visit", "south%20korea%20visit.jpeg", "Meetings"],
+  ["K J Somaiya College Visit", "k j somya visit.jpeg", "Institutions"],
+  ["South Korea Visit", "south korea visit.jpeg", "Meetings"],
   ["Institutional Engagement", "visits/1.jpeg", "Institutions"],
 ].map(([title, file, category]) => ({
   title: title as string,
   category: category as string,
-  src: `/images/GIS/${file}`,
+  src: getGisImage(file as string),
 }));
 
 export const globalLocations = [
