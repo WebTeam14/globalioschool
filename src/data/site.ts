@@ -1,24 +1,9 @@
 // Content sourced from globaliotschool.com — preserved verbatim where possible.
 
 import gisLogo from "@/assets/logo.jpeg";
+import { getGisAsset } from "./gisImages";
 
-const gisImages = import.meta.glob<string>("/src/assets/images/GIS/**/*", {
-  eager: true,
-  import: "default",
-});
-
-export function getGisImage(pathOrFilename: string): string {
-  const decoded = decodeURIComponent(pathOrFilename)
-    .replace(/^(\/)?(images\/GIS\/)?/, "")
-    .replace(/^(\/)?(src\/assets\/images\/GIS\/)?/, "");
-
-  for (const [key, value] of Object.entries(gisImages)) {
-    if (key.endsWith(`/${decoded}`) || decodeURIComponent(key).endsWith(`/${decoded}`) || key.endsWith(decoded)) {
-      return value;
-    }
-  }
-  return `/images/GIS/${decoded}`;
-}
+export const getGisImage = getGisAsset;
 
 const BASE = "https://globaliotschool.com";
 
