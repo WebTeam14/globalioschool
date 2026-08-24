@@ -295,35 +295,35 @@ export const testimonials = [
       "An excellent platform that bridges the gap between academic learning and real-world technology. A true enabler of future-ready professionals.",
     name: "Dr. Jayanta K. Behera",
     role: "Principal, St. Wilfred’s College",
-    image: `${BASE}/images/GIS/image%20(18).png`,
+    image: "/images/GIS/image%20(18).png",
   },
   {
     quote:
       "This training centre is an excellent choice for individuals looking to build their careers in SAP. The team offers constant support and career guidance, making it an amazing experience.",
     name: "Amit Shah",
     role: "Capgemini",
-    image: `${BASE}/images/GIS/t1.jpg`,
+    image: "/images/GIS/t1.jpg",
   },
   {
     quote:
       "Global IoT School provided exceptional SAP training with experienced instructors and fast placement support. A great partner in our students’ professional journey.",
     name: "Prajkata",
     role: "Reliance",
-    image: `${BASE}/images/GIS/t2.jpg`,
+    image: "/images/GIS/t2.jpg",
   },
   {
     quote:
       "Exceptional SAP training and swift placement support — Global IoT School truly empowers our students’ careers.",
     name: "Sandip Mishra",
     role: "HCLTech",
-    image: `${BASE}/images/GIS/WhatsApp%20Image%202025-11-06%20at%2010.46.24%20AM.jpeg`,
+    image: "/images/GIS/WhatsApp%20Image%202025-11-06%20at%2010.46.24%20AM.jpeg",
   },
   {
     quote:
       "Global IoT School is doing remarkable work in equipping students with cutting-edge, industry-relevant skills. Their practical approach is commendable.",
     name: "Dr. K. L. Verma",
     role: "Vice Chancellor, CSMU University",
-    image: `${BASE}/images/GIS/WhatsApp%20Image%202025-06-24%20at%203.51.06%20PM.jpg`,
+    image: "/images/GIS/WhatsApp%20Image%202025-06-24%20at%203.51.06%20PM.jpg",
   },
 ];
 
@@ -348,7 +348,7 @@ export const recruiters = [
   ["Liberty Videocon Insurance", "Liberty_General_Insurance.jpg"],
   ["The American University in Cairo", "unnamed.webp"],
   ["Jamna Auto Industries Ltd", "jamna.png"],
-].map(([name, file]) => ({ name: name as string, src: `${BASE}/images/GIS/${file}` }));
+].map(([name, file]) => ({ name: name as string, src: `/images/GIS/${file}` }));
 
 export const partners = [
   ["Karnatak Lingayat Education Society", "kle.png"],
@@ -363,50 +363,50 @@ export const partners = [
   ["Bhartee Vidyapheet", "bv.jpeg"],
   ["MGM College", "MGM_Institute_of_Health_Sciences_Logo.png"],
   ["NCRD Sterling College", "ncrd.jpeg"],
-].map(([name, file]) => ({ name: name as string, src: `${BASE}/images/GIS/${file}` }));
+].map(([name, file]) => ({ name: name as string, src: `/images/GIS/${file}` }));
 
 export const team = [
   {
     name: "Mr. Neeraj Kumar",
     role: "Founder & CEO",
     tag: "Founder & CEO",
-    image: `${BASE}/images/GIS/team/Mr.NeerajKumar.jpeg`,
+    image: "/images/GIS/team/Mr.NeerajKumar.jpeg",
   },
   {
     name: "Dr. Devanand Shinde",
     role: "Chief Strategic Advisor",
     tag: "Chief Advisor",
-    image: `${BASE}/images/GIS/team/Devanand%20shinde.jpeg`,
+    image: "/images/GIS/team/Devanand%20shinde.jpeg",
   },
   {
     name: "Dr. Anandi G",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: `${BASE}/images/GIS/team/anandi.png`,
+    image: "/images/GIS/team/anandi.png",
   },
   {
     name: "Mr. Saud Al Jarah",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: `${BASE}/images/GIS/director.jpeg`,
+    image: "/images/GIS/director.jpeg",
   },
   {
     name: "Dr. Saziya Khan",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: `${BASE}/images/GIS/team/saziya.png`,
+    image: "/images/GIS/team/saziya.png",
   },
   {
     name: "Dr. Jayanta K Behera",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: `${BASE}/images/GIS/team/Dr.Jayant.jpg`,
+    image: "/images/GIS/team/Dr.Jayant.jpg",
   },
   {
     name: "Mr. Mookwang Kim",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: `${BASE}/images/GIS/mookwang.jpeg`,
+    image: "/images/GIS/mookwang.jpeg",
   },
 ];
 
@@ -449,7 +449,7 @@ export const gallery = [
 ].map(([title, file, category]) => ({
   title: title as string,
   category: category as string,
-  src: `${BASE}/images/GIS/${file}`,
+  src: `/images/GIS/${file}`,
 }));
 
 export const globalLocations = [
