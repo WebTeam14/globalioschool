@@ -121,135 +121,135 @@ export const courses: {
   title: string;
   description: string;
 }[] = [
-  {
-    id: "ai-finance",
-    domain: "ai",
-    category: "Artificial Intelligence",
-    title: "AI in Finance & Automation",
-    description:
-      "Gain expertise in predictive analytics and automation for financial systems.",
-  },
-  {
-    id: "ai-analytics",
-    domain: "ai",
-    category: "Artificial Intelligence",
-    title: "Smart Business Analytics & Predictive Insights",
-    description:
-      "Learn to analyze business data intelligently and derive actionable insights using AI.",
-  },
-  {
-    id: "ai-trade",
-    domain: "ai",
-    category: "Artificial Intelligence",
-    title: "Trade Analytics with Predictive Modeling",
-    description:
-      "Analyze trading strategies, forecast financial trends, and apply AI-driven predictive models to enhance decision-making in stock and forex markets.",
-  },
-  {
-    id: "ai-supply",
-    domain: "ai",
-    category: "Artificial Intelligence",
-    title: "AI in Supply Chain & Logistics",
-    description:
-      "Optimize operations, demand forecasting, and delivery efficiency through AI-driven solutions.",
-  },
-  {
-    id: "sap-fico",
-    domain: "sap",
-    category: "SAP",
-    title: "SAP FICO – Finance & Control",
-    description:
-      "Manage enterprise financial operations and reporting efficiently.",
-  },
-  {
-    id: "sap-hcm",
-    domain: "sap",
-    category: "SAP",
-    title: "SAP HCM / EHS",
-    description:
-      "Automate HR and Environmental Health & Safety processes with SAP modules.",
-  },
-  {
-    id: "sap-logistics",
-    domain: "sap",
-    category: "SAP",
-    title: "SAP MM / SD / PP / PM / PS / WM",
-    description:
-      "Optimize supply chain, logistics, and manufacturing operations with SAP.",
-  },
-  {
-    id: "sap-tech",
-    domain: "sap",
-    category: "SAP",
-    title: "SAP ABAP / BASIS / S/4HANA / FIORI",
-    description:
-      "Develop, customize, and manage enterprise SAP applications efficiently.",
-  },
-  {
-    id: "cy-ethical",
-    domain: "cyber",
-    category: "Cybersecurity",
-    title: "Cyber Threats & Ethical Hacking",
-    description:
-      "Learn penetration testing and secure systems against cyberattacks.",
-  },
-  {
-    id: "cy-network",
-    domain: "cyber",
-    category: "Cybersecurity",
-    title: "Network & Cloud Security (GRC)",
-    description:
-      "Protect cloud infrastructures and ensure governance, risk, and compliance.",
-  },
-  {
-    id: "cy-privacy",
-    domain: "cyber",
-    category: "Cybersecurity",
-    title: "Data Privacy & Risk Management",
-    description:
-      "Implement data protection, governance, and cybersecurity frameworks.",
-  },
-  {
-    id: "cy-forensics",
-    domain: "cyber",
-    category: "Cybersecurity",
-    title: "Digital Forensics",
-    description:
-      "Investigate and analyze digital evidence to detect and resolve incidents.",
-  },
-  {
-    id: "iot-fundamentals",
-    domain: "iot",
-    category: "Internet of Things",
-    title: "IoT Fundamentals & Embedded Systems",
-    description:
-      "Understand IoT architecture, microcontrollers, and communication protocols.",
-  },
-  {
-    id: "iot-cloud",
-    domain: "iot",
-    category: "Internet of Things",
-    title: "Cloud & Edge Integration",
-    description:
-      "Integrate IoT devices with cloud and edge computing platforms.",
-  },
-  {
-    id: "iot-industrial",
-    domain: "iot",
-    category: "Internet of Things",
-    title: "Industrial IoT (IIoT)",
-    description:
-      "Implement smart manufacturing and industrial automation solutions.",
-  },
-  {
-    id: "iot-analytics",
-    domain: "iot",
-    category: "Internet of Things",
-    title: "IoT Data Analytics & Security",
-    description:
-      "Analyze IoT data and secure communication networks effectively.",
-  },
-];
+    {
+      id: "ai-finance",
+      domain: "ai",
+      category: "Artificial Intelligence",
+      title: "AI in Finance & Automation",
+      description:
+        "Gain expertise in predictive analytics and automation for financial systems.",
+    },
+    {
+      id: "ai-analytics",
+      domain: "ai",
+      category: "Artificial Intelligence",
+      title: "Smart Business Analytics & Predictive Insights",
+      description:
+        "Learn to analyze business data intelligently and derive actionable insights using AI.",
+    },
+    {
+      id: "ai-trade",
+      domain: "ai",
+      category: "Artificial Intelligence",
+      title: "Trade Analytics with Predictive Modeling",
+      description:
+        "Analyze trading strategies, forecast financial trends, and apply AI-driven predictive models to enhance decision-making in stock and forex markets.",
+    },
+    {
+      id: "ai-supply",
+      domain: "ai",
+      category: "Artificial Intelligence",
+      title: "AI in Supply Chain & Logistics",
+      description:
+        "Optimize operations, demand forecasting, and delivery efficiency through AI-driven solutions.",
+    },
+    {
+      id: "sap-fico",
+      domain: "sap",
+      category: "SAP",
+      title: "SAP FICO – Finance & Control",
+      description:
+        "Manage enterprise financial operations and reporting efficiently.",
+    },
+    {
+      id: "sap-hcm",
+      domain: "sap",
+      category: "SAP",
+      title: "SAP HCM / EHS",
+      description:
+        "Automate HR and Environmental Health & Safety processes with SAP modules.",
+    },
+    {
+      id: "sap-logistics",
+      domain: "sap",
+      category: "SAP",
+      title: "SAP MM / SD / PP / PM / PS / WM",
+      description:
+        "Optimize supply chain, logistics, and manufacturing operations with SAP.",
+    },
+    {
+      id: "sap-tech",
+      domain: "sap",
+      category: "SAP",
+      title: "SAP ABAP / BASIS / S/4HANA / FIORI",
+      description:
+        "Develop, customize, and manage enterprise SAP applications efficiently.",
+    },
+    {
+      id: "cy-ethical",
+      domain: "cyber",
+      category: "Cybersecurity",
+      title: "Cyber Threats & Ethical Hacking",
+      description:
+        "Learn penetration testing and secure systems against cyberattacks.",
+    },
+    {
+      id: "cy-network",
+      domain: "cyber",
+      category: "Cybersecurity",
+      title: "Network & Cloud Security (GRC)",
+      description:
+        "Protect cloud infrastructures and ensure governance, risk, and compliance.",
+    },
+    {
+      id: "cy-privacy",
+      domain: "cyber",
+      category: "Cybersecurity",
+      title: "Data Privacy & Risk Management",
+      description:
+        "Implement data protection, governance, and cybersecurity frameworks.",
+    },
+    {
+      id: "cy-forensics",
+      domain: "cyber",
+      category: "Cybersecurity",
+      title: "Digital Forensics",
+      description:
+        "Investigate and analyze digital evidence to detect and resolve incidents.",
+    },
+    {
+      id: "iot-fundamentals",
+      domain: "iot",
+      category: "Internet of Things",
+      title: "IoT Fundamentals & Embedded Systems",
+      description:
+        "Understand IoT architecture, microcontrollers, and communication protocols.",
+    },
+    {
+      id: "iot-cloud",
+      domain: "iot",
+      category: "Internet of Things",
+      title: "Cloud & Edge Integration",
+      description:
+        "Integrate IoT devices with cloud and edge computing platforms.",
+    },
+    {
+      id: "iot-industrial",
+      domain: "iot",
+      category: "Internet of Things",
+      title: "Industrial IoT (IIoT)",
+      description:
+        "Implement smart manufacturing and industrial automation solutions.",
+    },
+    {
+      id: "iot-analytics",
+      domain: "iot",
+      category: "Internet of Things",
+      title: "IoT Data Analytics & Security",
+      description:
+        "Analyze IoT data and secure communication networks effectively.",
+    },
+  ];
 
 export const objectives = [
   "Build capacity in emerging technologies and enable participants to manage digital solutions across industries.",
@@ -386,6 +386,12 @@ export const team = [
     image: teamImages.devanand,
   },
   {
+    name: "Dr. Nisha Kant Ohja",
+    role: "Strategic Advisor",
+    tag: "Advisor",
+    image: teamImages.ohja,
+  },
+  {
     name: "Dr. Anandi G",
     role: "Strategic Advisor",
     tag: "Advisor",
@@ -413,7 +419,7 @@ export const team = [
     name: "Mr. Mookwang Kim",
     role: "Strategic Advisor",
     tag: "Advisor",
-    image: teamImages.devanand,
+    image: teamImages.mookwang,
   },
 ];
 

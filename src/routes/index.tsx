@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Quote } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
@@ -7,6 +8,7 @@ import { EventMarquee } from "@/components/site/EventMarquee";
 import { AboutIntro } from "@/components/site/AboutIntro";
 import { WordSlider } from "@/components/site/WordSlider";
 import heroBg from "@/assets/hero-bg-new.jpg";
+import heroVideo from "@/assets/images/about.mp4";
 import {
   site,
   domains,
@@ -40,24 +42,30 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {
+        // Autoplay policy handled silently
+      });
+    }
+  }, []);
+
   return (
     <main>
       {/* Hero */}
       <section className="relative overflow-hidden bg-background text-foreground">
-        {/* Aesthetic tech background */}
+        {/* Aesthetic tech background image */}
         <img
           src={heroBg}
           alt=""
           aria-hidden
-          className="absolute inset-0 h-full w-full object-cover object-right"
+          className="absolute inset-0 h-full w-full object-cover object-right opacity-30"
           width={1920}
           height={1080}
         />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent"
-          aria-hidden
-        />
-        <div className="absolute inset-0 grid-lines opacity-40" aria-hidden />
+        <div className="absolute inset-0 grid-lines opacity-25" aria-hidden />
         <div
           className="pointer-events-none absolute -right-40 -top-40 size-[34rem] rounded-full bg-accent/25 blur-3xl"
           aria-hidden
@@ -66,7 +74,28 @@ function Index() {
           className="pointer-events-none absolute -left-32 bottom-0 size-[28rem] rounded-full bg-primary/15 blur-3xl"
           aria-hidden
         />
-        <div className="container-gis relative grid gap-8 py-10 md:py-6 lg:grid-cols-[1.1fr_0.9fr]">
+
+        {/* Left-side video aligned behind the hero text */}
+        <div
+          className="pointer-events-none absolute inset-y-0 left-0 w-full lg:w-[55%] overflow-hidden z-0"
+          aria-hidden
+        >
+          <video
+            ref={videoRef}
+            src={heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="h-full w-full object-cover object-center opacity-85"
+          />
+          {/* Subtle gradient feathering to seamlessly blend into background while preserving text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/40" />
+        </div>
+
+        <div className="container-gis relative z-10 grid gap-8 py-10 md:py-6 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal>
             <p className="eyebrow inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-primary">
               <span className="size-1.5 rounded-full bg-brand-orange" aria-hidden />

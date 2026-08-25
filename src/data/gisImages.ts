@@ -46,7 +46,9 @@ import verma from "@/assets/images/GIS/Testimoniols/Verma.jpg";
 // 4. Team (src/assets/images/GIS/team)
 import teamAnandi from "@/assets/images/GIS/team/anandi.png";
 import teamDevanand from "@/assets/images/GIS/team/Devanand shinde.jpeg";
+import teamOhja from "@/assets/images/GIS/team/Ohja.jpeg";
 import teamJayant from "@/assets/images/GIS/team/Dr.Jayant.jpg";
+import teamMookwang from "@/assets/images/GIS/team/mookwang kim.jpeg";
 import teamNeeraj from "@/assets/images/GIS/team/Mr.NeerajKumar.jpeg";
 import teamSaud from "@/assets/images/GIS/team/mr.saud.jpeg";
 import teamSaziya from "@/assets/images/GIS/team/saziya.png";
@@ -116,10 +118,12 @@ export const testimonialImages = {
 export const teamImages = {
   neeraj: teamNeeraj,
   devanand: teamDevanand,
+  ohja: teamOhja,
   anandi: teamAnandi,
   saud: teamSaud,
   saziya: teamSaziya,
   jayant: teamJayant,
+  mookwang: teamMookwang,
 };
 
 export const galleryImages = {
