@@ -21,7 +21,7 @@ export const site = {
     "Empower your career with world-class education in Artificial Intelligence, Internet of Things, Cybersecurity, and Data Analytics.",
   phones: ["+91 8082060006", "+91 7738860387"],
   email: "admin@globaliotschool.com",
-  adminEmail: "webadmin@technoriya.com",
+  adminEmail: "admission@globaliotschool.com",
   website: "www.globaliotschool.com",
   headOffice: "108B, Crystal Plaza, Andheri West, Mumbai",
   corporateOffice: "219, NBC Complex, CBD Belapur, Navi Mumbai",

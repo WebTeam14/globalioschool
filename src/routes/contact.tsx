@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Reach Global IoT School at +91 8082060006 or webadmin@technoriya.com. Head office in Andheri West, Mumbai; corporate office in CBD Belapur, Navi Mumbai.",
+          "Reach Global IoT School at +91 8082060006 or admission@globaliotschool.com. Head office in Andheri West, Mumbai; corporate office in CBD Belapur, Navi Mumbai.",
       },
       { property: "og:title", content: "Contact Global IoT School" },
       {
@@ -132,10 +132,10 @@ function ContactPage() {
                 <Mail className="size-5 text-brand-orange" />
                 <h3 className="mt-3 font-display text-base font-bold text-foreground">Official Email</h3>
                 <a
-                  href={`mailto:webadmin@technoriya.com`}
+                  href={`mailto:admission@globaliotschool.com`}
                   className="mt-1.5 block text-xs font-semibold text-primary hover:underline break-all"
                 >
-                  webadmin@technoriya.com
+                  admission@globaliotschool.com
                 </a>
                 <a
                   href={`mailto:${site.email}`}
@@ -168,7 +168,7 @@ function ContactPage() {
                     Send Us an Direct Enquiry
                   </h2>
                   <p className="text-xs text-muted-foreground">
-                    Sent directly to <span className="font-semibold text-primary">webadmin@technoriya.com</span>
+                    Sent directly to <span className="font-semibold text-primary">admission@globaliotschool.com</span>
                   </p>
                 </div>
               </div>
@@ -186,7 +186,7 @@ function ContactPage() {
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                     Thank you, <strong>{fullName}</strong>. Your enquiry has been routed to our administration team at{" "}
-                    <strong>webadmin@technoriya.com</strong>. We will get back to you promptly.
+                    <strong>admission@globaliotschool.com</strong>. We will get back to you promptly.
                   </p>
                   <button
                     type="button"
@@ -282,7 +282,7 @@ function ContactPage() {
                       {isSubmitting ? (
                         <>
                           <Loader2 className="size-4 animate-spin" />
-                          Sending Enquiry to webadmin@technoriya.com...
+                          Sending Enquiry to admission@globaliotschool.com...
                         </>
                       ) : (
                         <>
@@ -303,7 +303,7 @@ function ContactPage() {
                       <MessageCircle className="size-4" />
                       Chat on WhatsApp (+91 77387 37922)
                     </a>
-                    <span>Direct: <a href="mailto:webadmin@technoriya.com" className="font-semibold text-primary hover:underline">webadmin@technoriya.com</a></span>
+                    <span>Direct: <a href="mailto:admission@globaliotschool.com" className="font-semibold text-primary hover:underline">admission@globaliotschool.com</a></span>
                   </div>
                 </form>
               )}

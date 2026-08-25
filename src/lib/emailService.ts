@@ -16,10 +16,10 @@ export interface SendEmailResponse {
 }
 
 /**
- * Sends form enquiries directly to webadmin@technoriya.com using FormSubmit AJAX API.
+ * Sends form enquiries directly to admission@globaliotschool.com using FormSubmit AJAX API.
  */
 export async function sendEnquiryEmail(payload: EnquiryPayload): Promise<SendEmailResponse> {
-  const targetEmail = site.adminEmail || "webadmin@technoriya.com";
+  const targetEmail = site.adminEmail || "admission@globaliotschool.com";
 
   // Build clean dictionary for email body
   const currentUrl = typeof window !== "undefined" ? window.location.href : "https://globaliotschool.com";

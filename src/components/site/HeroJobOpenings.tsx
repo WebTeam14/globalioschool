@@ -184,7 +184,7 @@ export function HeroJobOpenings() {
 
         {/* Footer link to admin career desk */}
         <div className="mt-3 flex items-center justify-between border-t border-border/70 pt-2.5 text-[11px] text-muted-foreground">
-          <span>Direct: <a href="mailto:webadmin@technoriya.com" className="font-semibold text-primary hover:underline">webadmin@technoriya.com</a></span>
+          <span>Direct: <a href="mailto:admission@globaliotschool.com" className="font-semibold text-primary hover:underline">admission@globaliotschool.com</a></span>
           <button
             type="button"
             onClick={() => handleOpenApply(jobOpenings[0]!)}
