@@ -23,8 +23,7 @@ export const site = {
   email: "admin@globaliotschool.com",
   adminEmail: "admission@globaliotschool.com",
   website: "www.globaliotschool.com",
-  headOffice: "108B, Crystal Plaza, Andheri West, Mumbai",
-  corporateOffice: "219, NBC Complex, CBD Belapur, Navi Mumbai",
+  corporateOffice: "B - 118, Balaji Bhawan, Sector 11, CBD Belapur, 400614.",
   whatsapp:
     "https://wa.me/917738737922?text=Hello!%20I%20would%20like%20to%20know%20more.",
   social: {

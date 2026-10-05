@@ -1,0 +1,89 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-YXDreOVl.js
+var tsrStartManifest = () => ({ routes: {
+	__root__: {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/__root.tsx",
+		children: [
+			"/",
+			"/about",
+			"/consultancy",
+			"/contact",
+			"/courses",
+			"/gallery",
+			"/placement"
+		],
+		preloads: ["/assets/index-Cq2C8Pw2.js", "/assets/site-BtBSXMZf.js"],
+		scripts: [{ attrs: {
+			type: "module",
+			async: !0,
+			src: "/assets/index-Cq2C8Pw2.js"
+		} }]
+	},
+	"/": {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/index.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/routes-DthKG0Lq.js",
+			"/assets/Reveal-DKfrj09E.js",
+			"/assets/about-C-q_vPr-.js"
+		]
+	},
+	"/about": {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/about.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/about-AAGkFxrE.js",
+			"/assets/building-2-Cx9TGPYc.js",
+			"/assets/emailService-DIv9y50G.js",
+			"/assets/sparkles-O7AISvNq.js",
+			"/assets/Reveal-DKfrj09E.js",
+			"/assets/about-C-q_vPr-.js"
+		]
+	},
+	"/consultancy": {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/consultancy.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/consultancy-B39LCYF1.js",
+			"/assets/building-2-Cx9TGPYc.js",
+			"/assets/emailService-DIv9y50G.js",
+			"/assets/sparkles-O7AISvNq.js",
+			"/assets/Reveal-DKfrj09E.js"
+		]
+	},
+	"/contact": {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/contact.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/contact-BK8E_JNS.js",
+			"/assets/building-2-Cx9TGPYc.js",
+			"/assets/emailService-DIv9y50G.js",
+			"/assets/Reveal-DKfrj09E.js"
+		]
+	},
+	"/courses": {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/courses.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/courses-DFQrE1t0.js",
+			"/assets/emailService-DIv9y50G.js",
+			"/assets/sparkles-O7AISvNq.js",
+			"/assets/Reveal-DKfrj09E.js"
+		]
+	},
+	"/gallery": {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/gallery.tsx",
+		children: void 0,
+		preloads: ["/assets/gallery-BCXXkGvr.js", "/assets/Reveal-DKfrj09E.js"]
+	},
+	"/placement": {
+		filePath: "C:/Users/Lenovo/OneDrive/Documents/Mitali/globalioschool/src/routes/placement.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/placement-C2D4I1Fv.js",
+			"/assets/building-2-Cx9TGPYc.js",
+			"/assets/Reveal-DKfrj09E.js"
+		]
+	}
+} });
+//#endregion
+export { tsrStartManifest };

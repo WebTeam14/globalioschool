@@ -96,13 +96,7 @@ function ContactPage() {
                 Administrative &amp; Campus Locations
               </h2>
               <div className="mt-4 space-y-4 text-sm text-muted-foreground">
-                <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 size-5 shrink-0 text-primary" />
-                  <div>
-                    <strong className="block text-foreground">Head Office (Mumbai):</strong>
-                    {site.headOffice}
-                  </div>
-                </div>
+
                 <div className="flex items-start gap-3">
                   <Building2 className="mt-0.5 size-5 shrink-0 text-brand-orange" />
                   <div>
@@ -148,9 +142,11 @@ function ContactPage() {
 
             <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
               <iframe
-                title="Global IoT School location map"
-                src="https://www.google.com/maps?q=Crystal+Plaza+Andheri+West+Mumbai&output=embed"
+                title="Balaji Bhavan location map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7544.127305928261!2d73.02977847770993!3d19.016916600000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3ad1ea110f7%3A0xbe32aeb9f5d1c4aa!2sBalaji%20Bhavan!5e0!3m2!1sen!2sin!4v1791195555087!5m2!1sen!2sin"
                 loading="lazy"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
                 className="h-[260px] w-full border-0"
               />
             </div>
