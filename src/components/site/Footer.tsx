@@ -125,21 +125,27 @@ export function Footer() {
             <ul className="mt-5 space-y-4 text-sm text-navy-foreground/75">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-cyan" aria-hidden />
-                <span>
-                  <strong className="font-semibold text-navy-foreground">Head Office:</strong>{" "}
-                  {site.headOffice}
-                  <br />
-                  <strong className="font-semibold text-navy-foreground">
-                    Corporate Office:
-                  </strong>{" "}
-                  {site.corporateOffice}
+                <span className="space-y-1 block">
+                  <span>
+                    <strong className="font-semibold text-navy-foreground">Corporate Office (Navi Mumbai):</strong>{" "}
+                    {site.corporateOffice}
+                  </span>
+                  <span className="block pt-1">
+                    <strong className="font-semibold text-navy-foreground">Branch Office (Mumbai):</strong>{" "}
+                    {site.branchOffice}
+                  </span>
                 </span>
               </li>
               <li className="flex gap-3">
                 <Phone className="mt-0.5 size-4 shrink-0 text-cyan" aria-hidden />
-                <a href="tel:+918082060006" className="hover:text-cyan">
-                  {site.phones.join(" / ")}
-                </a>
+                <div className="space-y-0.5">
+                  <a href="tel:02247452405" className="block font-semibold hover:text-cyan">
+                    Helpline: 022 4745 2405 ({site.helpline})
+                  </a>
+                  <a href="tel:+918082060006" className="block text-xs hover:text-cyan text-navy-foreground/75">
+                    Mobile: {site.phones.join(" / ")}
+                  </a>
+                </div>
               </li>
               <li className="flex gap-3">
                 <Mail className="mt-0.5 size-4 shrink-0 text-cyan" aria-hidden />

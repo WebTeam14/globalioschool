@@ -20,10 +20,14 @@ export const site = {
   heroText:
     "Empower your career with world-class education in Artificial Intelligence, Internet of Things, Cybersecurity, and Data Analytics.",
   phones: ["+91 8082060006", "+91 7738860387"],
+  helpline: "2247452405",
+  helplineDisplay: "022 4745 2405",
   email: "admin@globaliotschool.com",
   adminEmail: "admission@globaliotschool.com",
   website: "www.globaliotschool.com",
   corporateOffice: "B - 118, Balaji Bhawan, Sector 11, CBD Belapur, 400614.",
+  branchOffice:
+    "207/208, Mahalaxmi Centre, Opp. Balbharti School S. V. Road, Kandivali West, Mumbai 400 067",
   whatsapp:
     "https://wa.me/917738737922?text=Hello!%20I%20would%20like%20to%20know%20more.",
   social: {

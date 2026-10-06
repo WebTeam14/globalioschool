@@ -104,22 +104,41 @@ function ContactPage() {
                     {site.corporateOffice}
                   </div>
                 </div>
+
+                <div className="flex items-start gap-3 border-t border-border/60 pt-4">
+                  <Building2 className="mt-0.5 size-5 shrink-0 text-primary" />
+                  <div>
+                    <strong className="block text-foreground">Branch Office (Mumbai):</strong>
+                    {site.branchOffice}
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
                 <Phone className="size-5 text-primary" />
-                <h3 className="mt-3 font-display text-base font-bold text-foreground">Call Desks</h3>
-                {site.phones.map((p) => (
+                <h3 className="mt-3 font-display text-base font-bold text-foreground">Call &amp; Helpline Desks</h3>
+                <div className="mt-2 space-y-1.5">
                   <a
-                    key={p}
-                    href={`tel:${p.replace(/\s/g, "")}`}
-                    className="mt-1.5 block text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+                    href="tel:02247452405"
+                    className="flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
                   >
-                    {p}
+                    <span className="rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-bold text-primary uppercase tracking-wider">
+                      Helpline
+                    </span>
+                    <span>022 4745 2405 ({site.helpline})</span>
                   </a>
-                ))}
+                  {site.phones.map((p) => (
+                    <a
+                      key={p}
+                      href={`tel:${p.replace(/\s/g, "")}`}
+                      className="block text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {p}
+                    </a>
+                  ))}
+                </div>
               </div>
 
               <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">

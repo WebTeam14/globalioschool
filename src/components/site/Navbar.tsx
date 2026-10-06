@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu, X, ChevronDown, ArrowUpRight } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowUpRight, Phone, Mail, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { site, navItems, domains, placementMenu, consultancyMenu } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -46,15 +46,58 @@ export function Navbar() {
         className={cn(
           "sticky top-0 z-50 w-full transition-all duration-300",
           scrolled
-            ? "border-b border-border bg-background/85 shadow-[0_10px_40px_-32px_rgba(10,25,60,0.9)] backdrop-blur-xl"
+            ? "border-b border-border bg-background/90 shadow-[0_10px_40px_-32px_rgba(10,25,60,0.9)] backdrop-blur-xl"
             : "border-b border-transparent bg-background",
         )}
       >
+        {/* Top Announcement / Helpline Bar */}
+        <div className="border-b border-white/10 bg-slate-950 text-slate-200 text-xs py-1.5 transition-colors">
+          <div className="container-gis flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-3 sm:gap-5">
+              <a
+                href="tel:02247452405"
+                className="inline-flex items-center gap-1.5 font-medium text-white hover:text-cyan transition-colors"
+                aria-label="Call Helpline 022 47452405"
+              >
+                <span className="flex size-5 items-center justify-center rounded-full bg-cyan/20 text-cyan">
+                  <Phone className="size-3" />
+                </span>
+                <span>Helpline: <strong className="font-bold text-cyan tracking-wide">022 4745 2405 ({site.helpline})</strong></span>
+              </a>
+
+              <span className="hidden text-slate-600 sm:inline">|</span>
+
+              <a
+                href="mailto:admission@globaliotschool.com"
+                className="hidden items-center gap-1.5 text-slate-300 hover:text-white transition-colors sm:inline-flex"
+              >
+                <Mail className="size-3 text-cyan" />
+                <span>admission@globaliotschool.com</span>
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3 text-[11px]">
+              <span className="hidden lg:inline-flex items-center gap-1 text-slate-400">
+                <MapPin className="size-3 text-brand-orange" />
+                <span>CBD Belapur &amp; Kandivali West</span>
+              </span>
+              <a
+                href={site.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-md bg-emerald-600 px-2.5 py-0.5 font-semibold text-white shadow-xs transition-colors hover:bg-emerald-500"
+              >
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Brand accent line */}
-      <div
-        className="h-1 w-full bg-[linear-gradient(90deg,var(--navy),var(--brand-teal),var(--brand-orange),var(--cyan))]"
-        aria-hidden
-      />
+        <div
+          className="h-1 w-full bg-[linear-gradient(90deg,var(--navy),var(--brand-teal),var(--brand-orange),var(--cyan))]"
+          aria-hidden
+        />
 
       <div
         className={cn(
