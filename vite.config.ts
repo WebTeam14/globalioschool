@@ -8,6 +8,11 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   vite: {
+    server: {
+      watch: {
+        ignored: ["**/.output/**", "**/.tanstack/**", "**/node_modules/**", "**/.git/**"],
+      },
+    },
     build: {
       assetsInlineLimit: 0,
     },
