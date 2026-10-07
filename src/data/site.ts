@@ -35,7 +35,7 @@ export const site = {
     instagram: "https://www.instagram.com/globaliotschool/",
   },
   external: {
-    erp: "https://www.globaliotschool.com/invoice/auth/login.php",
+    erp: "https://global-iot-school.onrender.com/login",
     register: `${BASE}/course-enroll-popup/index.php`,
     iotProjects: `${BASE}/iot_project/IOT-projects.php`,
     tradeAnalytics: `${BASE}/TradeView%20(1)/index.html`,
@@ -358,7 +358,7 @@ export const recruiters = [
   ["Liberty Videocon Insurance", "Liberty_General_Insurance.jpg"],
   ["The American University in Cairo", "unnamed.webp"],
   ["Jamna Auto Industries Ltd", "jamna.png"],
-].map(([name, file]) => ({ name: name as string, src: recruiterImages[file] || "" }));
+].map(([name, file]) => ({ name: name as string, src: recruiterImages[file as string] || "" }));
 
 export const partners = [
   ["Karnatak Lingayat Education Society", "kle.png"],
@@ -373,7 +373,7 @@ export const partners = [
   ["Bhartee Vidyapheet", "bv.jpeg"],
   ["MGM College", "MGM_Institute_of_Health_Sciences_Logo.png"],
   ["NCRD Sterling College", "ncrd.jpeg"],
-].map(([name, file]) => ({ name: name as string, src: partnerImages[file] || "" }));
+].map(([name, file]) => ({ name: name as string, src: partnerImages[file as string] || "" }));
 
 export const team = [
   {
