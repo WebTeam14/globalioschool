@@ -1,6 +1,6 @@
 // Content sourced from globaliotschool.com — preserved verbatim where possible.
 
-import gisLogo from "@/assets/logo.png";
+import gisLogo from "@/assets/Logo.png";
 import {
   recruiterImages,
   partnerImages,
