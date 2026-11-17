@@ -1,6 +1,6 @@
 // Content sourced from globaliotschool.com — preserved verbatim where possible.
 
-import gisLogo from "@/assets/logo.jpeg";
+import gisLogo from "@/assets/logo.png";
 import {
   recruiterImages,
   partnerImages,
@@ -15,7 +15,7 @@ export const site = {
   name: "Global IoT School",
   short: "GIS",
   logo: gisLogo,
-  tagline: "Shaping Your Digital Future with AI Innovation",
+  tagline: "Learn Innovate Lead",
   eyebrow: "WELCOME TO GLOBAL IOT SCHOOL",
   heroText:
     "Empower your career with world-class education in Artificial Intelligence, Internet of Things, Cybersecurity, and Data Analytics.",
@@ -28,8 +28,7 @@ export const site = {
   corporateOffice: "B - 118, Balaji Bhawan, Sector 11, CBD Belapur, 400614.",
   branchOffice:
     "207/208, Mahalaxmi Centre, Opp. Balbharti School S. V. Road, Kandivali West, Mumbai 400 067",
-  whatsapp:
-    "https://wa.me/917738737922?text=Hello!%20I%20would%20like%20to%20know%20more.",
+  whatsapp: "https://wa.me/917738737922?text=Hello!%20I%20would%20like%20to%20know%20more.",
   social: {
     linkedin: "https://www.linkedin.com/in/global-iot-school",
     instagram: "https://www.instagram.com/globaliotschool/",
@@ -60,9 +59,17 @@ export const placementMenu = [
 
 export const consultancyMenu = [
   { id: "dpr", title: "University/College DPR Consultancy", subtitle: "Detailed project reports" },
-  { id: "autonomous", title: "Autonomous College Compliance", subtitle: "Governance & documentation" },
+  {
+    id: "autonomous",
+    title: "Autonomous College Compliance",
+    subtitle: "Governance & documentation",
+  },
   { id: "ranking", title: "NAAC/UGC/NIRF/QS Ranking", subtitle: "Accreditation & rankings" },
-  { id: "international", title: "International Collaboration", subtitle: "Global academic tie-ups" },
+  {
+    id: "international",
+    title: "International Collaboration",
+    subtitle: "Global academic tie-ups",
+  },
 ];
 
 export const heroTech = [
@@ -75,13 +82,135 @@ export const heroTech = [
   "AI",
 ];
 
-export const degreePrograms = [
-  { code: "BSc", title: "BSC IOT", note: "Internet of Things" },
-  { code: "BSc", title: "BSC OT Cyber Security", note: "Operational Technology Security" },
-  { code: "BCom", title: "BCOM With AI", note: "Artificial Intelligence" },
-  { code: "BCom", title: "BCOM with Supply Chain Management", note: "Logistics & Operations" },
-  { code: "BSc", title: "BSC with Digital Marketing", note: "Growth & Analytics" },
-  { code: "BSc", title: "BSC in School Media Management", note: "Media & Communication" },
+export interface DegreeProgram {
+  id: string;
+  code: string;
+  title: string;
+  note: string;
+  duration: string;
+  eligibility: string;
+  overview: string;
+  highlights: string[];
+  careerOpportunities: string[];
+  badge: string;
+}
+
+export const degreePrograms: DegreeProgram[] = [
+  {
+    id: "bsc-ot-cybersecurity",
+    code: "B.Sc.",
+    title: "B.Sc. in Operational Technology (OT) & Cybersecurity",
+    note: "Industrial Control Systems (ICS), SCADA Protection, Plant Automation & OT Cyber Defense",
+    duration: "3 Years Full-Time (6 Semesters)",
+    eligibility: "10+2 / HSC with Science / IT / Computer Science or equivalent",
+    overview:
+      "A specialized industry-integrated degree program engineered to train cyber defenders for critical infrastructure, manufacturing plants, smart grids, and industrial IoT environments. Learn hands-on threat hunting, SCADA/PLC protocol analysis, zero-trust network architectures, and ICS cyber security compliance.",
+    highlights: [
+      "Hands-on SCADA & PLC simulation labs at Belapur & Kandivali West campuses",
+      "Threat modeling, incident response & defense-in-depth for industrial networks",
+      "Alignment with international OT standards (IEC 62443, NIST SP 800-82)",
+      "100% placement cell assistance with leading industrial automation & cyber security firms",
+    ],
+    careerOpportunities: [
+      "OT Security Analyst",
+      "SCADA / ICS Cyber Specialist",
+      "Critical Infrastructure Consultant",
+      "Industrial SOC Engineer",
+    ],
+    badge: "High Placement Demand",
+  },
+  {
+    id: "bsc-iot-cybersecurity",
+    code: "B.Sc.",
+    title: "B.Sc. in Internet of Things (IoT) & Cybersecurity",
+    note: "Connected Smart Devices, Embedded Firmware Security, Cloud IoT Telemetry & Network Defense",
+    duration: "3 Years Full-Time (6 Semesters)",
+    eligibility: "10+2 / HSC with Science / IT or equivalent",
+    overview:
+      "Learn to architect, program, and secure next-generation IoT ecosystems spanning smart cities, healthcare devices, robotics, and industrial sensing. Covers microcontroller firmware hacking, cryptographic key exchange, MQTT/CoAP security, and end-to-end cloud platform integration.",
+    highlights: [
+      "Dedicated hardware prototyping, sensor interfacing, and micro-controller labs",
+      "Firmware reverse engineering, hardware hacking & IoT vulnerability assessments",
+      "Edge-to-cloud security on AWS IoT Core, Azure IoT, and private brokers",
+      "Practical industry internship projects with real-world IoT deployment partners",
+    ],
+    careerOpportunities: [
+      "IoT Security Specialist",
+      "Embedded Systems Engineer",
+      "Smart Infrastructure Architect",
+      "IoT Penetration Tester",
+    ],
+    badge: "Industry Integrated",
+  },
+  {
+    id: "bcom-supply-chain",
+    code: "B.Com.",
+    title: "Bcom in Supply Chain Management",
+    note: "Global Logistics, Enterprise SCM, Procurement Analytics & SAP S/4HANA Supply Chain",
+    duration: "3 Years Full-Time (6 Semesters)",
+    eligibility: "10+2 / HSC in Commerce, Science, or Arts with English",
+    overview:
+      "Blend core commercial, accounting, and trade fundamentals with modern logistics operations, cold chain logistics, EXIM procedures, and enterprise supply chain software. Master demand forecasting, inventory optimization, and automated warehouse management.",
+    highlights: [
+      "Hands-on training in SAP SCM / ERP workflows and real-time inventory systems",
+      "Port logistics, freight forwarding, customs documentation & international trade laws",
+      "Procurement analytics, vendor scoring & automated supply pipeline modeling",
+      "Placement recruitment tie-ups with maritime logistics hubs, e-commerce giants & MNCs",
+    ],
+    careerOpportunities: [
+      "Supply Chain Analyst",
+      "Logistics & Operations Coordinator",
+      "Procurement & Sourcing Specialist",
+      "Freight & Export-Import Executive",
+    ],
+    badge: "Commerce + Logistics",
+  },
+  {
+    id: "bcom-ai",
+    code: "B.Com.",
+    title: "Bachelor of Commerce (B.Com.) with Artificial Intelligence",
+    note: "FinTech Innovation, Algorithmic Decision Making, Predictive Financial Analytics & AI Tools",
+    duration: "3 Years Full-Time (6 Semesters)",
+    eligibility: "10+2 / HSC in Commerce or equivalent",
+    overview:
+      "An innovative degree that bridges traditional finance and corporate commerce with modern AI data intelligence, automated financial modeling, and predictive analytics. Equips students with the technical skills to streamline corporate accounting, detect banking fraud, and leverage generative AI in business decision-making.",
+    highlights: [
+      "Financial data analytics with Python, SQL, Power BI, and modern AI algorithms",
+      "Automated accounting, robo-advisory fundamentals & credit risk evaluation",
+      "FinTech regulatory compliance, digital payments & blockchain ledger basics",
+      "Placement pathways in investment banking, financial consulting, and fintech startups",
+    ],
+    careerOpportunities: [
+      "Financial AI Analyst",
+      "FinTech Operations Associate",
+      "Business Intelligence Specialist",
+      "Corporate Finance & Risk Analyst",
+    ],
+    badge: "Next-Gen FinTech",
+  },
+  {
+    id: "bsc-social-media",
+    code: "B.Sc.",
+    title: "Bachelor of Science (B.Sc.) with Social Media Management",
+    note: "Digital Brand Strategy, Social Analytics, AI Content Engineering & Growth Marketing",
+    duration: "3 Years Full-Time (6 Semesters)",
+    eligibility: "10+2 / HSC in any stream (Science, Commerce, Arts)",
+    overview:
+      "A scientific and technology-driven approach to digital influence, media virality, and brand engineering. Combines consumer psychology and multimedia storytelling with data analytics, generative AI content pipelines, search engine mechanics, and multi-channel campaign automation.",
+    highlights: [
+      "Hands-on social media analytics, audience segmentation & sentiment tracking",
+      "Generative AI tools for high-converting video, design, and copywriting workflows",
+      "Performance advertising, influencer marketing campaigns & brand reputation PR",
+      "Live client campaign portfolios and agency internship experiences in Mumbai",
+    ],
+    careerOpportunities: [
+      "Social Media Strategist",
+      "Digital Brand Growth Lead",
+      "Content Intelligence Manager",
+      "Performance Marketing Specialist",
+    ],
+    badge: "Creative Tech",
+  },
 ];
 
 export const domains = [
@@ -129,8 +258,7 @@ export const courses: {
       domain: "ai",
       category: "Artificial Intelligence",
       title: "AI in Finance & Automation",
-      description:
-        "Gain expertise in predictive analytics and automation for financial systems.",
+      description: "Gain expertise in predictive analytics and automation for financial systems.",
     },
     {
       id: "ai-analytics",
@@ -161,96 +289,84 @@ export const courses: {
       domain: "sap",
       category: "SAP",
       title: "SAP FICO – Finance & Control",
-      description:
-        "Manage enterprise financial operations and reporting efficiently.",
+      description: "Manage enterprise financial operations and reporting efficiently.",
     },
     {
       id: "sap-hcm",
       domain: "sap",
       category: "SAP",
       title: "SAP HCM / EHS",
-      description:
-        "Automate HR and Environmental Health & Safety processes with SAP modules.",
+      description: "Automate HR and Environmental Health & Safety processes with SAP modules.",
     },
     {
       id: "sap-logistics",
       domain: "sap",
       category: "SAP",
       title: "SAP MM / SD / PP / PM / PS / WM",
-      description:
-        "Optimize supply chain, logistics, and manufacturing operations with SAP.",
+      description: "Optimize supply chain, logistics, and manufacturing operations with SAP.",
     },
     {
       id: "sap-tech",
       domain: "sap",
       category: "SAP",
       title: "SAP ABAP / BASIS / S/4HANA / FIORI",
-      description:
-        "Develop, customize, and manage enterprise SAP applications efficiently.",
+      description: "Develop, customize, and manage enterprise SAP applications efficiently.",
     },
     {
       id: "cy-ethical",
       domain: "cyber",
       category: "Cybersecurity",
       title: "Cyber Threats & Ethical Hacking",
-      description:
-        "Learn penetration testing and secure systems against cyberattacks.",
+      description: "Learn penetration testing and secure systems against cyberattacks.",
     },
     {
       id: "cy-network",
       domain: "cyber",
       category: "Cybersecurity",
       title: "Network & Cloud Security (GRC)",
-      description:
-        "Protect cloud infrastructures and ensure governance, risk, and compliance.",
+      description: "Protect cloud infrastructures and ensure governance, risk, and compliance.",
     },
     {
       id: "cy-privacy",
       domain: "cyber",
       category: "Cybersecurity",
       title: "Data Privacy & Risk Management",
-      description:
-        "Implement data protection, governance, and cybersecurity frameworks.",
+      description: "Implement data protection, governance, and cybersecurity frameworks.",
     },
     {
       id: "cy-forensics",
       domain: "cyber",
       category: "Cybersecurity",
       title: "Digital Forensics",
-      description:
-        "Investigate and analyze digital evidence to detect and resolve incidents.",
+      description: "Investigate and analyze digital evidence to detect and resolve incidents.",
     },
     {
       id: "iot-fundamentals",
       domain: "iot",
       category: "Internet of Things",
       title: "IoT Fundamentals & Embedded Systems",
-      description:
-        "Understand IoT architecture, microcontrollers, and communication protocols.",
+      description: "Understand IoT architecture, microcontrollers, and communication protocols.",
     },
     {
       id: "iot-cloud",
       domain: "iot",
       category: "Internet of Things",
       title: "Cloud & Edge Integration",
-      description:
-        "Integrate IoT devices with cloud and edge computing platforms.",
+      description: "Integrate IoT devices with cloud and edge computing platforms.",
     },
     {
       id: "iot-industrial",
       domain: "iot",
       category: "Internet of Things",
       title: "Industrial IoT (IIoT)",
-      description:
-        "Implement smart manufacturing and industrial automation solutions.",
+      description: "Implement smart manufacturing and industrial automation solutions.",
     },
     {
       id: "iot-analytics",
       domain: "iot",
       category: "Internet of Things",
       title: "IoT Data Analytics & Security",
-      description:
-        "Analyze IoT data and secure communication networks effectively.",
+      description: "Analyze IoT data and secure communication networks effectively.",
     },
   ];
 
@@ -282,13 +398,11 @@ export const pillars = [
   },
   {
     title: "Practical Learning & Projects",
-    description:
-      "Gain hands-on experience through live labs, simulations, and industry projects.",
+    description: "Gain hands-on experience through live labs, simulations, and industry projects.",
   },
   {
     title: "Globally Recognized Certification",
-    description:
-      "Earn joint certification from Global IoT School and collaborating institutes.",
+    description: "Earn joint certification from Global IoT School and collaborating institutes.",
   },
 ];
 
@@ -436,7 +550,11 @@ export const gallery = [
     src: galleryImages.csmu,
   },
   { title: "CKT College", category: "Institutions", src: galleryImages.ckt },
-  { title: "Orientation Session - Modern College", category: "Orientation", src: galleryImages.morden },
+  {
+    title: "Orientation Session - Modern College",
+    category: "Orientation",
+    src: galleryImages.morden,
+  },
   {
     title: "Orientation Session - St Wilfred College",
     category: "Orientation",
@@ -457,8 +575,16 @@ export const gallery = [
     category: "Meetings",
     src: galleryImages.esds,
   },
-  { title: "Meeting with Dr. Homi Bhabha University", category: "Meetings", src: galleryImages.homiBhabha },
-  { title: "Orientation Session at St. Wilfred’s College", category: "Orientation", src: galleryImages.wilfredOrientation },
+  {
+    title: "Meeting with Dr. Homi Bhabha University",
+    category: "Meetings",
+    src: galleryImages.homiBhabha,
+  },
+  {
+    title: "Orientation Session at St. Wilfred’s College",
+    category: "Orientation",
+    src: galleryImages.wilfredOrientation,
+  },
   { title: "K J Somaiya College Visit", category: "Institutions", src: galleryImages.somya },
   { title: "South Korea Visit", category: "Meetings", src: galleryImages.southKorea },
   { title: "Institutional Engagement", category: "Institutions", src: galleryImages.institutional },
@@ -512,7 +638,8 @@ export const jobOpenings: JobOpening[] = [
     openingsCount: 2,
     postedDate: "Today",
     tag: "Urgent Hiring",
-    description: "Deliver hands-on sessions in Generative AI, PyTorch, computer vision, and neural network project mentoring.",
+    description:
+      "Deliver hands-on sessions in Generative AI, PyTorch, computer vision, and neural network project mentoring.",
     skills: ["Python", "PyTorch", "GenAI", "LLMs"],
   },
   {
@@ -525,7 +652,8 @@ export const jobOpenings: JobOpening[] = [
     openingsCount: 3,
     postedDate: "1d ago",
     tag: "Admin Featured",
-    description: "Design lab simulations, hardware testbeds (ESP32/STM32), and edge-to-cloud industrial protocols.",
+    description:
+      "Design lab simulations, hardware testbeds (ESP32/STM32), and edge-to-cloud industrial protocols.",
     skills: ["ESP32", "MQTT", "MicroPython", "Edge AI"],
   },
   {
@@ -538,7 +666,8 @@ export const jobOpenings: JobOpening[] = [
     openingsCount: 1,
     postedDate: "2d ago",
     tag: "New Opening",
-    description: "Lead live ethical hacking labs, network penetration exercises, and industry SOC compliance workshops.",
+    description:
+      "Lead live ethical hacking labs, network penetration exercises, and industry SOC compliance workshops.",
     skills: ["SOC", "Penetration Testing", "Wireshark", "GRC"],
   },
   {
@@ -551,7 +680,8 @@ export const jobOpenings: JobOpening[] = [
     openingsCount: 2,
     postedDate: "3d ago",
     tag: "Admin Pick",
-    description: "Mentor learners on SAP FICO / MM implementation, business process workflows, and ERP configurations.",
+    description:
+      "Mentor learners on SAP FICO / MM implementation, business process workflows, and ERP configurations.",
     skills: ["SAP FICO", "S/4HANA", "ERP Implementation"],
   },
   {
@@ -564,8 +694,8 @@ export const jobOpenings: JobOpening[] = [
     openingsCount: 2,
     postedDate: "4d ago",
     tag: "Active",
-    description: "Coordinate student certifications, associate company hiring drives, and daily academic schedules.",
+    description:
+      "Coordinate student certifications, associate company hiring drives, and daily academic schedules.",
     skills: ["Student Support", "Hiring Drives", "CRM", "Coordination"],
   },
 ];
-

@@ -9,14 +9,21 @@ export function Footer() {
       <div className="container-gis relative py-10">
         <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
           <div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3.5 sm:gap-4">
               <img
                 src={site.logo}
                 alt="Global IoT School logo"
-                className="h-11 w-auto rounded bg-white/95 p-1"
+                className="h-16 sm:h-20 w-auto shrink-0 rounded-xl bg-white/95 p-2 shadow-sm object-contain"
                 loading="lazy"
               />
-              <span className="font-display text-lg font-semibold">Global IoT School</span>
+              <div className="flex flex-col justify-center leading-tight">
+                <span className="font-display text-lg sm:text-xl font-bold tracking-tight text-white">
+                  Global IoT School
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-medium uppercase tracking-[0.18em] text-cyan">
+                  Learn Innovate Lead
+                </span>
+              </div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-navy-foreground/70">
               Global IoT School (GIS), established in 2017, is a Mumbai-based EdTech

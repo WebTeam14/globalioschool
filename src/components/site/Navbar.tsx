@@ -101,29 +101,29 @@ export function Navbar() {
 
       <div
         className={cn(
-          "container-gis grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 transition-all duration-300",
-          scrolled ? "h-16" : "h-20",
+          "container-gis grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 sm:gap-4 transition-all duration-300",
+          scrolled ? "h-16 sm:h-20" : "h-20 sm:h-24",
         )}
       >
         <Link
           to="/"
-          className="flex min-w-0 items-center gap-3"
+          className="flex min-w-0 items-center gap-2.5 sm:gap-3.5"
           aria-label="Global IoT School home"
         >
           <img
             src={site.logo}
             alt="Global IoT School logo"
             className={cn(
-              "w-auto shrink-0 rounded-lg transition-all duration-300",
-              scrolled ? "h-10" : "h-12",
+              "w-auto shrink-0 rounded-lg object-contain transition-all duration-300",
+              scrolled ? "h-11 sm:h-14" : "h-13 sm:h-16 md:h-18",
             )}
           />
-          <span className="hidden min-w-0 flex-col leading-tight sm:flex">
-            <span className="truncate font-display text-base font-bold tracking-tight text-primary">
+          <span className="flex min-w-0 flex-col justify-center leading-tight">
+            <span className="truncate font-display text-sm font-bold tracking-tight text-primary sm:text-base md:text-lg lg:text-xl">
               Global IoT School
             </span>
-            <span className="hidden truncate text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-brand-orange md:block">
-              Technology · Innovation · Opportunity
+            <span className="truncate text-[0.55rem] font-medium uppercase tracking-[0.16em] text-brand-orange sm:text-[0.625rem] md:text-[0.65rem]">
+              Learn Innovate Lead
             </span>
           </span>
         </Link>
@@ -247,15 +247,30 @@ export function Navbar() {
           )}
         >
           <div className="flex h-20 items-center justify-between border-b border-border px-5">
-            <img
-              src={site.logo}
-              alt="Global IoT School logo"
-              className="h-10 w-auto rounded-lg"
-            />
+            <Link
+              to="/"
+              className="flex min-w-0 items-center gap-2.5"
+              onClick={() => setOpen(false)}
+              aria-label="Global IoT School home"
+            >
+              <img
+                src={site.logo}
+                alt="Global IoT School logo"
+                className="h-12 w-auto shrink-0 rounded-lg object-contain"
+              />
+              <span className="flex min-w-0 flex-col justify-center leading-tight">
+                <span className="truncate font-display text-sm font-bold tracking-tight text-primary">
+                  Global IoT School
+                </span>
+                <span className="truncate text-[0.6rem] font-medium uppercase tracking-[0.16em] text-brand-orange">
+                  Learn Innovate Lead
+                </span>
+              </span>
+            </Link>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="inline-flex size-10 items-center justify-center rounded-md border border-border"
+              className="inline-flex size-10 shrink-0 items-center justify-center rounded-md border border-border"
               aria-label="Close menu"
             >
               <X className="size-5" aria-hidden />
